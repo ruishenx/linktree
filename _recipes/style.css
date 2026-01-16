@@ -1,0 +1,116 @@
+:root {
+  --accent: #ffc600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://i.imgur.com/er8DtBW.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "PingFang SC", "Microsoft YaHei",
+    sans-serif;
+  color: #fff;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  display: inline-block;
+  margin-top: 0;
+  font: 50px cookie, cursive;
+  border-bottom: 4px solid var(--accent);
+}
+
+/* ---------- buttons ---------- */
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.button {
+  position: relative;
+  margin: 5px 15px;
+  padding: 12px 24px;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+/* 内部高亮层 */
+.button .highlight {
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.button--is-active .highlight {
+  opacity: 1;
+}
+
+/* ---------- menu ---------- */
+
+.menu {
+  display: none;
+}
+
+.menu--is-visible {
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+}
+
+/* ---------- item ---------- */
+
+.item__header {
+  display: flex;
+  align-items: baseline;
+}
+
+.item__title {
+  font: 35px cookie, cursive;
+  color: var(--accent);
+  margin: 0;
+}
+
+.item__dots {
+  flex: 1;
+  border-bottom: 1px dashed #aaa;
+  margin: 0 15px;
+}
+
+.item__time {
+  font: 31px cookie, cursive;
+  color: var(--accent);
+}
+
+.item__description {
+  margin-bottom: 40px;
+}

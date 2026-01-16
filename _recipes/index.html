@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>日常食谱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+  <h2>食谱</h2>
+
+  <div class="buttons-container">
+    <a href="#" class="button button--is-active" data-target="stapleMenu">
+      <span class="highlight"></span>
+      主食
+    </a>
+    <a href="#" class="button" data-target="meatMenu">
+      <span class="highlight"></span>
+      肉食
+    </a>
+    <a href="#" class="button" data-target="vegetarianMenu">
+      <span class="highlight"></span>
+      素食
+    </a>
+    <a href="#" class="button" data-target="soupMenu">
+      <span class="highlight"></span>
+      汤羹
+    </a>
+  </div>
+
+  <!-- 主食 -->
+  <div class="menu menu--is-visible" id="stapleMenu">
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">清汤面条</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">30min</span>
+      </div>
+      <p class="item__description">
+        面条 千张 腐竹 番茄 胡萝卜 白菜 豆腐 香菇 金针菇 生抽 香油
+      </p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">蛋炒饭</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">30min</span>
+      </div>
+      <p class="item__description">米饭 鸡蛋 胡萝卜 生抽</p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">蒸包子</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">90min</span>
+      </div>
+      <p class="item__description">面粉 鸡蛋 香菇 胡萝卜 白菜 韭菜 生抽 香油</p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">馄饨</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">90min</span>
+      </div>
+      <p class="item__description">面粉 鸡蛋 香菇 胡萝卜 白菜 豆腐 海带 紫菜 木耳 冬瓜 生抽 香油</p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">肉夹馍</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">120min</span>
+      </div>
+      <p class="item__description">面粉 鸡蛋 鸡胸肉 羊后腿肉 羊肋条 牛肋条 牛上脑 生抽 香油</p>
+    </div>
+  </div>
+
+  <!-- 肉食 -->
+  <div class="menu" id="meatMenu">
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">炒鸡丁</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">30min</span>
+      </div>
+      <p class="item__description">
+        鸡胸肉 香菇 胡萝卜 青椒 生抽
+      </p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">孜然肉片</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">30min</span>
+      </div>
+      <p class="item__description">羊后腿肉 羊里脊 牛里脊 牛上脑 香菜 生抽 胡椒粉</p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">清蒸虾</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">30min</span>
+      </div>
+      <p class="item__description">虾 生抽 食醋</p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">清蒸鱼</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">30min</span>
+      </div>
+      <p class="item__description">独刺鱼 葱花 香菜 生抽</p>
+    </div>
+  </div>
+
+  <!-- 素食 -->
+  <div class="menu" id="vegetarianMenu">
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">番茄炒鸡蛋</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">20min</span>
+      </div>
+      <p class="item__description">
+        鸡蛋 番茄 葱花 生抽
+      </p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">炒青菜</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">20min</span>
+      </div>
+      <p class="item__description">香菇 青菜 胡萝卜 蒜 生抽</p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">炒西兰花</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">20min</span>
+      </div>
+      <p class="item__description">香菇 西兰花 胡萝卜 蒜 生抽</p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">炒土豆丝</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">30min</span>
+      </div>
+      <p class="item__description">土豆 胡萝卜 葱花 蒜 生抽</p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">凉拌蔬菜</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">20min</span>
+      </div>
+      <p class="item__description">金针菇 紫甘蓝 黄瓜 木耳 香菜 食醋</p>
+    </div>
+  </div>
+
+  <!-- 汤羹 -->
+  <div class="menu" id="soupMenu">
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">番茄鸡蛋汤</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">20min</span>
+      </div>
+      <p class="item__description">
+        鸡蛋 番茄 木耳 香菜 淀粉 生抽 香油
+      </p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">紫菜蛋花汤</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">20min</span>
+      </div>
+      <p class="item__description">鸡蛋 金针菇 青菜 紫菜 淀粉 生抽 香油</p>
+    </div>
+
+    <div class="item">
+      <div class="item__header">
+        <h3 class="item__title">冬瓜海带汤</h3>
+        <span class="item__dots"></span>
+        <span class="item__time">30min</span>
+      </div>
+      <p class="item__description">豆腐 千张 冬瓜 海带 玉米 木耳 生抽 香油</p>
+    </div>
+  </div>
+    
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.button');
+  const menus = document.querySelectorAll('.menu');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', e => {
+      e.preventDefault();
+
+      buttons.forEach(b => b.classList.remove('button--is-active'));
+      menus.forEach(m => m.classList.remove('menu--is-visible'));
+
+      button.classList.add('button--is-active');
+      document
+        .getElementById(button.dataset.target)
+        .classList.add('menu--is-visible');
+    });
+  });
+</script>
+
+</body>
+</html>
