@@ -6,6 +6,25 @@
 
 ---
 
+## 信用违约互换 CDS
+
+- <a href="https://sc.macromicro.me/collections/7840/global-cds/68239/us-5year-cds" target="_blank"><h4>United States 5-Year CDS</h4></a>
+- <a href="https://sc.macromicro.me/collections/7840/global-cds/68273/china-5year-cds" target="_blank"><h4>China 5-Year CDS</h4></a>
+- <a href="https://sc.macromicro.me/collections/7840/global-cds/68243/uk-5year-cds" target="_blank"><h4>United Kingdom 5-Year CDS</h4></a>
+- <a href="https://sc.macromicro.me/collections/7840/global-cds/68271/japan-5year-cds" target="_blank"><h4>Japan 5-Year CDS</h4></a>
+- <a href="https://sc.macromicro.me/collections/7840/global-cds/68244/germany-5year-cds" target="_blank"><h4>Germany 5-Year CDS</h4></a>
+- <a href="https://sc.macromicro.me/collections/7840/global-cds/68251/france-5year-cds" target="_blank"><h4>France 5-Year CDS</h4></a>
+- <a href="https://sc.macromicro.me/collections/7840/global-cds/68242/brazil-5year-cds" target="_blank"><h4>Brazil 5-Year CDS</h4></a>
+- <a href="https://sc.macromicro.me/collections/7840/global-cds/68256/turkey-5year-cds" target="_blank"><h4>Turkey 5-Year CDS</h4></a>
+
+> Frequency: <mark>Weekly</mark>
+
+> Delay: <mark>1 W</mark>
+
+> Correlation: <span style="color: red;">Very Strong</span>
+
+---
+
 ## 投资级企业债 Investment Grade Bonds 
 
 - <a href="https://fred.stlouisfed.org/series/BAMLC0A0CM" target="_blank"><h4>ICE BofA US Corporate Index Option-Adjusted Spread</h4></a>
