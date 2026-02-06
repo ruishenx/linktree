@@ -72,17 +72,17 @@
       <td>2</td>
       <td>ETF</td>
     </tr>
-    <tr data-k1="Equities" data-k2="Industrials" data-k3="1" data-k4="ETF">
-      <td>DIA</td>
+    <tr data-k1="Equities" data-k2="Mixed" data-k3="1" data-k4="ETF">
+      <td>SPY</td>
       <td>Equities</td>
-      <td>Industrials</td>
+      <td>Mixed</td>
       <td>1</td>
       <td>ETF</td>
     </tr>
-    <tr data-k1="Equities" data-k2="Industrials" data-k3="2" data-k4="ETF">
-      <td>DDM</td>
+    <tr data-k1="Equities" data-k2="Mixed" data-k3="2" data-k4="ETF">
+      <td>SSO</td>
       <td>Equities</td>
-      <td>Industrials</td>
+      <td>Mixed</td>
       <td>2</td>
       <td>ETF</td>
     </tr>
@@ -143,6 +143,13 @@
       <td>ETF</td>
     </tr>
     <tr data-k1="Equities" data-k2="Mixed" data-k3="1" data-k4="ETF">
+      <td>SCHD</td>
+      <td>Equities</td>
+      <td>Mixed</td>
+      <td>1</td>
+      <td>ETF</td>
+    </tr>
+    <tr data-k1="Equities" data-k2="Mixed" data-k3="1" data-k4="ETF">
       <td>GUNR</td>
       <td>Equities</td>
       <td>Mixed</td>
@@ -169,6 +176,13 @@
       <td>Healthcare</td>
       <td>1</td>
       <td>ETF</td>
+    </tr>
+    <tr data-k1="Equities" data-k2="Financials" data-k3="1" data-k4="Stock">
+      <td>BRK.B</td>
+      <td>Equities</td>
+      <td>Financials</td>
+      <td>1</td>
+      <td>Stock</td>
     </tr>
     <tr data-k1="Equities" data-k2="Discretionary" data-k3="1" data-k4="Stock">
       <td>TSLA</td>

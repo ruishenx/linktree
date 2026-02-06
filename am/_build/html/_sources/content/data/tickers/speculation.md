@@ -72,10 +72,10 @@
       <td>3</td>
       <td>Token</td>
     </tr>
-    <tr data-k1="Equities" data-k2="Industrials" data-k3="3" data-k4="ETF">
-      <td>UDOW</td>
+    <tr data-k1="Equities" data-k2="Mixed" data-k3="3" data-k4="ETF">
+      <td>UPRO</td>
       <td>Equities</td>
-      <td>Industrials</td>
+      <td>Mixed</td>
       <td>3</td>
       <td>ETF</td>
     </tr>
@@ -112,6 +112,13 @@
       <td>Equities</td>
       <td>Healthcare</td>
       <td>3</td>
+      <td>ETF</td>
+    </tr>
+    <tr data-k1="Equities" data-k2="Financials" data-k3="2" data-k4="ETF">
+      <td>BRKU</td>
+      <td>Equities</td>
+      <td>Financials</td>
+      <td>2</td>
       <td>ETF</td>
     </tr>
     <tr data-k1="Equities" data-k2="Discretionary" data-k3="3" data-k4="ETF">
@@ -275,11 +282,11 @@
       <td>2</td>
       <td>ETF</td>
     </tr>
-    <tr data-k1="Equities" data-k2="Financials" data-k3="-1" data-k4="ETF">
-      <td>FIAT</td>
+    <tr data-k1="Equities" data-k2="Financials" data-k3="-2" data-k4="ETF">
+      <td>CONI</td>
       <td>Equities</td>
       <td>Financials</td>
-      <td>-1</td>
+      <td>-2</td>
       <td>ETF</td>
     </tr>
     <tr data-k1="Equities" data-k2="Financials" data-k3="1" data-k4="Stock">
@@ -301,6 +308,13 @@
       <td>Equities</td>
       <td>Financials</td>
       <td>2</td>
+      <td>ETF</td>
+    </tr>
+    <tr data-k1="Equities" data-k2="Financials" data-k3="-2" data-k4="ETF">
+      <td>SMST</td>
+      <td>Equities</td>
+      <td>Financials</td>
+      <td>-2</td>
       <td>ETF</td>
     </tr>
   </tbody>
