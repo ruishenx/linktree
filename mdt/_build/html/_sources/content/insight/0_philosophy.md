@@ -1,4 +1,4 @@
-# 我的哲学 My Philosophy
+# 哲学 Philosophy
 
 ## 关于自由意志
 
