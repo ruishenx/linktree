@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>信息伪造与识别 Information Falsification &amp; Verification &#8212; 理论与元认知 Theory &amp; Metacognition</title>
+    <title>概念与定理 Concepts &amp; Theorems &#8212; 理论与元认知 Theory &amp; Metacognition</title>
   
   
   
@@ -30,9 +30,9 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -50,18 +50,20 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/info/info_falsification_verification';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/info/0_concept';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="信息传播 Information Dissemination" href="info_dissemination.html" />
-    <link rel="prev" title="如何获取有效信息" href="info_acquisition/2_high_signal_info.html" />
+    <link rel="next" title="信源 Information Source" href="1_source/intro.html" />
+    <link rel="prev" title="信息 information" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,13 +183,14 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">信息 information</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="info_acquisition/intro.html">有关信息</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="info_acquisition/1_info_source.html">信息源</a></li>
-<li class="toctree-l3"><a class="reference internal" href="info_acquisition/2_high_signal_info.html">如何获取有效信息</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">信息伪造与识别 Information Falsification &amp; Verification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="info_dissemination.html">信息传播 Information Dissemination</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">概念与定理 Concepts &amp; Theorems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_source/intro.html">信源 Information Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_transmitter/intro.html">发送器 Transmitter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_noise/intro.html">噪声 Noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_receiver/intro.html">接收器 Receiver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_destination/intro.html">信宿 Destination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_sr.html">关于信息的自指问题 Self-reference Problems about Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_guidance.html">指南 Guidance</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../llm/intro.html">大语言模型 LLM</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -311,7 +314,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/info/info_falsification_verification.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/info/0_concept.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,7 +344,7 @@
       
       
       
-      <li><a href="../../_sources/content/info/info_falsification_verification.md" target="_blank"
+      <li><a href="../../_sources/content/info/0_concept.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -423,7 +426,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>信息伪造与识别 Information Falsification & Verification</h1>
+    <h1>概念与定理 Concepts & Theorems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -437,8 +440,37 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="information-falsification-verification">
-<h1>信息伪造与识别 Information Falsification &amp; Verification<a class="headerlink" href="#information-falsification-verification" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="concepts-theorems">
+<h1>概念与定理 Concepts &amp; Theorems<a class="headerlink" href="#concepts-theorems" title="Link to this heading">#</a></h1>
+<p>假定有一个可能事件集，这些事件的发生概率 <span class="math notranslate nohighlight">\(p_{1},p_{2},...,p_{n}\)</span>。这些概率是已知的，但关于将会发生哪个事件，我们也就知道这么多了。我们能否找到一种度量，用来测量在选择事件时涉及多少种“选择”，或者输出中会有多少不确定性？</p>
+<p>如果存在这样一种度量，比如说 <span class="math notranslate nohighlight">\(H(p_{1},p_{2},...,p_{n})\)</span>，那要求它具有以下性质是合理的:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(H\)</span> 应当关于 <span class="math notranslate nohighlight">\(p_{i}\)</span> 连续。</p></li>
+<li><p>如果所有 <span class="math notranslate nohighlight">\(p_{i}\)</span> 都相等，即 <span class="math notranslate nohighlight">\(p_{i}=\frac{1}{n}\)</span>，则 <span class="math notranslate nohighlight">\(H\)</span> 应当是 <span class="math notranslate nohighlight">\(n\)</span> 的单调增函数。如果事件的可能性相等，那可能事件越多，选择或者说不确定性也更多。</p></li>
+<li><p>如果一项选择被分解为两个连续选择，则原来的 <span class="math notranslate nohighlight">\(H\)</span> 应当是各个 <span class="math notranslate nohighlight">\(H\)</span> 值的加权和。</p></li>
+</ol>
+<p><strong>定理：</strong> 唯一能够满足上述三条假定的H具有如下形式:</p>
+<p><span class="math notranslate nohighlight">\(H=-K\sum_{i=1}^{n}p_{i}log~p_{i}\)</span></p>
+<p>其中 <span class="math notranslate nohighlight">\(K\)</span> 是一个正常数。</p>
+<p>形如 <span class="math notranslate nohighlight">\(H=-\Sigma p_{i}log~p_{i}\)</span> 的量（常数 <span class="math notranslate nohighlight">\(K\)</span> 只不过是为了度量单位的选择）在信息论中扮演着核心角色，作为信息、选择和不确定性的度量。将会看出，<span class="math notranslate nohighlight">\(H\)</span> 的这一形式就是<mark>统计力学中某些公式中定义的熵</mark>，其中 <span class="math notranslate nohighlight">\(p_{i}\)</span> 是一个系统处于其相位空间中单元格 <span class="math notranslate nohighlight">\(i\)</span> 的概率。</p>
+<p>如果存在两种可能性，概率分别为 <span class="math notranslate nohighlight">\(p\)</span> 和 <span class="math notranslate nohighlight">\(q=1-p\)</span>，则熵为:</p>
+<p><span class="math notranslate nohighlight">\(H=-(p~log~p+q~log~q)\)</span></p>
+<p>将它作为 <span class="math notranslate nohighlight">\(p\)</span> 的函数画在下图中。</p>
+<p><img alt="" src="../../_images/Fig7.png" /></p>
+<p>量 <span class="math notranslate nohighlight">\(H\)</span> 有许多重要性质，这些性质进一步表明了它作为选择度量或信息度量的合理性。</p>
+<ol class="arabic simple">
+<li><p>当且仅当所有 <span class="math notranslate nohighlight">\(p_{i}\)</span> 中只有一个的取值为 <span class="math notranslate nohighlight">\(1\)</span>，其他均为 <span class="math notranslate nohighlight">\(0\)</span> 时，<span class="math notranslate nohighlight">\(H=0\)</span>。仅当我们可以确定输出结果时，<span class="math notranslate nohighlight">\(H\)</span> 消失。否则，<span class="math notranslate nohighlight">\(H\)</span> 为正数。</p></li>
+<li><p>对于一个给定 <span class="math notranslate nohighlight">\(n\)</span>，当所有 <span class="math notranslate nohighlight">\(p_{i}\)</span> 都相等（即 <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span>）时，<span class="math notranslate nohighlight">\(H\)</span> 达到最大值 <span class="math notranslate nohighlight">\(log~n\)</span>。<mark>这种情景也正是我们在直觉上感受的最不确定情景。</mark></p></li>
+</ol>
+<blockquote>
+<div><p>当在既定信息结构下，各备选结果的概率分布已近似均匀（即熵接近最大），且无法通过额外信息进一步降低不确定性时，理性决策应承认信息不可得性。在此情形下，引入外生随机机制（如抛硬币及其他等概率随机选择）作为决策规则，是一种无偏且一致的策略。</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>一个联合事件的不确定性小于或等于各个不确
+定性之和。</p></li>
+<li><p>假定有两个随机事件 <span class="math notranslate nohighlight">\(x\)</span> 和 <span class="math notranslate nohighlight">\(y\)</span>，它们不一定相互独立。对于 <span class="math notranslate nohighlight">\(x\)</span> 可以取到的任意特定值 <span class="math notranslate nohighlight">\(i\)</span> 存在一
+个 <span class="math notranslate nohighlight">\(y\)</span> 取 <span class="math notranslate nohighlight">\(j\)</span> 值的条件概率 <span class="math notranslate nohighlight">\(p_{i}(j)\)</span>。我们将 <span class="math notranslate nohighlight">\(y\)</span> 的条件熵 <span class="math notranslate nohighlight">\(H_{x}(y)\)</span> 定义为关于每个 <span class="math notranslate nohighlight">\(x\)</span> 值，<span class="math notranslate nohighlight">\(y\)</span> 的熵的加权平均，加权值为取得特定 <span class="math notranslate nohighlight">\(x\)</span> 值的概率。<mark>除非 x 和 y 是独立事件，否则 y 的不确定性会因为知道 x 值而下降，当两者独立时，该不确定性保持不变</mark>，即 <span class="math notranslate nohighlight">\(H(y) \ge H_{x}(y)\)</span>。</p></li>
+</ol>
 </section>
 
     <script type="text/x-thebe-config">
@@ -472,20 +504,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="info_acquisition/2_high_signal_info.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">如何获取有效信息</p>
+        <p class="prev-next-title">信息 information</p>
       </div>
     </a>
     <a class="right-next"
-       href="info_dissemination.html"
+       href="1_source/intro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">信息传播 Information Dissemination</p>
+        <p class="prev-next-title">信源 Information Source</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
