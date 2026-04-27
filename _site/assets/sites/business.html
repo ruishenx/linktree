@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting</title>
+  <meta http-equiv="refresh" content="0; url=../navigation.html#page=site-Business">
+  <script>
+    (function () {
+      var target = "../navigation.html#page=site-Business";
+      if (location.hash && target.indexOf('section=') === -1) {
+        var section = encodeURIComponent(location.hash.slice(1));
+        target += (target.indexOf('?') === -1 && target.indexOf('#') !== -1 ? '&' : '#') + 'section=' + section;
+      }
+      location.replace(target);
+    })();
+  </script>
+</head>
+<body>
+  <a href="../navigation.html#page=site-Business">Open navigation</a>
+</body>
+</html>
