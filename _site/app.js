@@ -53,8 +53,22 @@
     return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${path}"></path></svg>`;
   }
 
-  function escapeAttr(value) {
-    return String(value || "").replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+  function isRemoteUrl(value) {
+    return /^https?:\/\//i.test(value || "");
+  }
+
+  function createLazyImage(src, alt = "", options = {}) {
+    const image = document.createElement("img");
+    image.src = src;
+    image.alt = alt;
+    image.loading = options.loading || "lazy";
+    image.setAttribute("decoding", "async");
+    if (options.className) image.className = options.className;
+    if (options.width) image.width = options.width;
+    if (options.height) image.height = options.height;
+    if (options.fetchPriority) image.setAttribute("fetchpriority", options.fetchPriority);
+    if (isRemoteUrl(src)) image.referrerPolicy = "no-referrer";
+    return image;
   }
 
   function setSidebarCollapsed(collapsed, persist = true) {
@@ -148,15 +162,58 @@
   }
 
   function renderHome() {
+    setPageContext({ id: "home", group: "home" });
     document.title = `${data.meta.title} | ${data.meta.subtitle}`;
     dom.breadcrumb.textContent = "首页";
-    dom.pageMount.className = "page home-blank";
+    dom.pageMount.className = "page home-books-page";
     dom.pageMount.innerHTML = "";
+
+    const grid = document.createElement("ul");
+    grid.className = "home-book-grid";
+    grid.setAttribute("aria-label", "首页书本展示");
+    (data.home?.books || []).forEach((book, index) => {
+      grid.appendChild(homeBookTile(book, index));
+    });
+    dom.pageMount.appendChild(grid);
+
     updateSectionsToggle(null);
     applyAutoSidebar();
   }
 
+  function homeBookTile(book, index) {
+    const tile = document.createElement("li");
+    tile.className = "home-book-tile";
+
+    const placeholder = document.createElement("span");
+    placeholder.className = "home-book-cover-placeholder";
+    placeholder.textContent = book.title || `Book ${index + 1}`;
+    placeholder.setAttribute("aria-hidden", "true");
+    tile.appendChild(placeholder);
+
+    if (book.image) {
+      const label = book.title || `Book ${index + 1}`;
+      const image = createLazyImage(book.image, label, {
+        className: "home-book-cover",
+        loading: index < 4 ? "eager" : "lazy",
+        fetchPriority: index < 2 ? "high" : "auto"
+      });
+      image.addEventListener("load", () => tile.classList.add("is-loaded"), { once: true });
+      image.addEventListener("error", () => {
+        tile.classList.add("is-empty");
+        tile.setAttribute("aria-label", label);
+        image.remove();
+      }, { once: true });
+      tile.appendChild(image);
+    } else {
+      tile.classList.add("is-empty");
+      tile.setAttribute("aria-label", book.title || `Book ${index + 1}`);
+    }
+
+    return tile;
+  }
+
   function renderPage(page, sectionId) {
+    setPageContext(page);
     document.title = `${page.pageTitle} | ${data.meta.title}`;
     dom.breadcrumb.textContent = page.pageTitle;
     dom.pageMount.className = "page";
@@ -197,6 +254,11 @@
     }
   }
 
+  function setPageContext(page) {
+    dom.body.dataset.pageId = page.id;
+    dom.body.dataset.pageGroup = page.group || "sites";
+  }
+
   function renderBoard(board, page) {
     const columns = Array.from({ length: getColumnCount() }, () => {
       const column = document.createElement("div");
@@ -216,11 +278,13 @@
     panel.className = "section-panel";
     panel.id = sectionDomId(page.id, section.id);
     const key = sectionKey(page.id, section.id);
-    panel.classList.toggle("is-collapsed", !state.expandedSections.has(key));
+    const initiallyExpanded = state.expandedSections.has(key);
+    panel.classList.toggle("is-collapsed", !initiallyExpanded);
 
     const toggle = document.createElement("button");
     toggle.className = "section-toggle";
     toggle.type = "button";
+    toggle.setAttribute("aria-expanded", String(initiallyExpanded));
     toggle.innerHTML = `
       <span class="section-heading">
         <span class="section-icon" style="color:${sectionColor(index)}">${section.icon || page.icon || iconSvg("home")}</span>
@@ -231,14 +295,28 @@
     `;
     toggle.addEventListener("click", () => {
       panel.classList.toggle("is-collapsed");
-      if (panel.classList.contains("is-collapsed")) state.expandedSections.delete(key);
-      else state.expandedSections.add(key);
+      const expanded = !panel.classList.contains("is-collapsed");
+      if (expanded) {
+        state.expandedSections.add(key);
+        hydrateSectionItems();
+      } else {
+        state.expandedSections.delete(key);
+      }
+      toggle.setAttribute("aria-expanded", String(expanded));
       updateSectionsToggle(page);
     });
 
     const items = document.createElement("div");
     items.className = "section-items";
-    section.items.forEach((item) => items.appendChild(itemCard(item)));
+
+    function hydrateSectionItems() {
+      if (items.dataset.hydrated === "true") return;
+      // Most sections start collapsed, so delaying card creation cuts initial DOM and image work.
+      section.items.forEach((item) => items.appendChild(itemCard(item)));
+      items.dataset.hydrated = "true";
+    }
+
+    if (initiallyExpanded) hydrateSectionItems();
     panel.append(toggle, items);
     return panel;
   }
@@ -250,7 +328,9 @@
     const icon = document.createElement("span");
     icon.className = "item-icon";
     if (item.image) {
-      icon.innerHTML = `<img src="${escapeAttr(item.image)}" alt="" loading="lazy" width="32" height="32">`;
+      const image = createLazyImage(item.image, "", { width: 32, height: 32 });
+      image.addEventListener("error", () => setSvg(icon, item.svg || iconSvg("home")), { once: true });
+      icon.appendChild(image);
     } else {
       setSvg(icon, item.svg || iconSvg("home"));
     }
@@ -326,6 +406,7 @@
   function updateSectionsToggle(page) {
     const hasSections = page && page.sections.length > 0;
     dom.sectionsToggle.hidden = !hasSections;
+    dom.sectionsToggle.style.display = hasSections ? "" : "none";
     if (!hasSections) return;
 
     const allExpanded = areAllSectionsExpanded(page);
