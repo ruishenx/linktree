@@ -3027,6 +3027,13 @@ window.SITE_DATA = {
               "svg": ""
             },
             {
+              "title": "Wine Folly",
+              "url": "https://winefolly.com/",
+              "status": "NoGFW",
+              "image": "assets/sites/img/life/food/winefolly.png",
+              "svg": ""
+            },
+            {
               "title": "Wine-Searcher",
               "url": "https://www.wine-searcher.com/",
               "status": "NoGFW",
