@@ -100,6 +100,11 @@ body.dark-mode {
   color: #f1f1f1;
 }
 
+body.dark-mode .page-title.page-text-color,
+body.dark-mode .page-bioline.page-text-color {
+  color: #ffffff;
+}
+
 /* 按钮样式 */
 .theme-toggle {
   position: fixed;
