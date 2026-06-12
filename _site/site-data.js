@@ -1002,6 +1002,13 @@ window.SITE_DATA = {
               "svg": ""
             },
             {
+              "title": "Laws of UX",
+              "url": "https://lawsofux.com/",
+              "status": "NoGFW",
+              "image": "assets/sites/img/it/front_end/lawsofux.png",
+              "svg": ""
+            },
+            {
               "title": "Loadership",
               "url": "https://www.loadership.com/",
               "status": "NoGFW",
@@ -2100,6 +2107,13 @@ window.SITE_DATA = {
               "svg": ""
             },
             {
+              "title": "Quanta Magazine",
+              "url": "https://www.quantamagazine.org/",
+              "status": "NoGFW",
+              "image": "assets/sites/img/education/platform/quantamagazine.png",
+              "svg": ""
+            },
+            {
               "title": "Simons Foundation",
               "url": "https://www.simonsfoundation.org/",
               "status": "NoGFW",
@@ -2545,6 +2559,13 @@ window.SITE_DATA = {
               "url": "https://www.scribbr.com/",
               "status": "Worldwide",
               "image": "assets/sites/img/education/tools/scribbr.png",
+              "svg": ""
+            },
+            {
+              "title": "UCDP",
+              "url": "https://ucdp.uu.se/",
+              "status": "Worldwide",
+              "image": "assets/sites/img/education/tools/ucdp.png",
               "svg": ""
             }
           ],
