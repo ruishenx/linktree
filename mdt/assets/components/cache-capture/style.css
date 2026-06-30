@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 18px; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #111827; }
+.app { max-width: 980px; margin: 0 auto; }
+.header { margin-bottom: 16px; }
+.header h1 { margin: 0 0 6px 0; font-size: 24px; }
+.header p, .hint, .meta { color: #6b7280; }
+.panel { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 16px; margin-bottom: 14px; box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06); }
+.panel h2 { margin-top: 0; }
+label { display: block; margin: 12px 0; font-weight: 700; }
+input[type="text"], textarea { width: 100%; margin-top: 6px; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 10px; font: inherit; }
+textarea { resize: vertical; }
+button { cursor: pointer; border: 0; border-radius: 10px; padding: 10px 14px; font-weight: 800; background: #111827; color: white; }
+button.primary { background: #4f46e5; }
+button.danger { background: #dc2626; }
+button.ghost { background: #f3f4f6; color: #111827; border: 1px solid #d1d5db; }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.row.between { justify-content: space-between; }
+.status { color: #4b5563; font-size: 14px; font-weight: 700; }
+.file-box { border: 2px dashed #c7d2fe; border-radius: 14px; padding: 14px; background: #eef2ff; }
+.file-box input { display: block; margin-top: 8px; }
+.file-preview { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin: 10px 0 14px 0; }
+.file-item { border: 1px solid #e5e7eb; border-radius: 12px; padding: 8px; background: #f9fafb; font-size: 13px; overflow-wrap: anywhere; }
+.card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px; margin: 10px 0; background: #ffffff; }
+.card h3 { margin: 0 0 6px 0; }
+.badge { display: inline-block; padding: 2px 8px; margin: 2px; border-radius: 999px; background: #eef2ff; color: #3730a3; font-size: 12px; font-weight: 700; }
+.detail { margin-top: 10px; }
+.detail img { max-width: 100%; border-radius: 10px; margin: 8px 0; border: 1px solid #e5e7eb; }
+.detail audio, .detail video { width: 100%; margin: 8px 0; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #f9fafb; padding: 10px; border-radius: 10px; border: 1px solid #e5e7eb; }
+@media (max-width: 640px) { body { padding: 10px; } .panel { padding: 12px; } }

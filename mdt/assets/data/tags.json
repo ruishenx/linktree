@@ -1,0 +1,14 @@
+{
+  "mkdocs": [
+    "cache",
+    "research"
+  ],
+  "resource-standard": [
+    "spec-resource-file-standard"
+  ],
+  "iframe": [
+    "cache-capture",
+    "knowledge-graph",
+    "macro-dashboard"
+  ]
+}

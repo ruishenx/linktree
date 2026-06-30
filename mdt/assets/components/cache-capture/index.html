@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cache Capture</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>缓存层 Capture</h1>
+      <p>在发布设备上快速记录文字、链接和同步文件，并写入本地知识库目录。</p>
+    </header>
+
+    <section class="panel">
+      <div class="row">
+        <button id="pickRootBtn">选择知识库根目录</button>
+        <button id="restoreRootBtn" class="ghost">尝试恢复目录授权</button>
+        <span id="rootStatus" class="status">未选择</span>
+      </div>
+      <p class="hint">请选择解压后的项目根目录，例如 <code>personal_kb_full_mvp/</code>。需要桌面版 Chrome / Edge。</p>
+    </section>
+
+    <section class="panel">
+      <h2>新建缓存</h2>
+      <label>标题<input id="titleInput" type="text" placeholder="几句话概括即可"></label>
+      <label>快速记录<textarea id="textInput" rows="6" placeholder="输入临时想法、摘录、判断、待处理事项"></textarea></label>
+      <label>链接，每行一个<textarea id="linksInput" rows="3" placeholder="https://example.com"></textarea></label>
+      <label>标签，用逗号分隔<input id="tagsInput" type="text" placeholder="mkdocs, cache, idea"></label>
+      <div class="row">
+        <label class="file-box">选择文件<input id="fileInput" type="file" multiple></label>
+        <button id="loadInboxBtn" class="ghost">从 _inbox 导入文件</button>
+        <button id="clearFilesBtn" class="ghost">清空文件</button>
+      </div>
+      <div id="filePreview" class="file-preview"></div>
+      <div class="row">
+        <button id="saveBtn" class="primary">保存到缓存层</button>
+        <button id="clearFormBtn" class="ghost">清空表单</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="row between"><h2>缓存列表</h2><button id="refreshBtn">刷新</button></div>
+      <div id="list" class="list"></div>
+    </section>
+  </main>
+  <script src="./main.js"></script>
+</body>
+</html>

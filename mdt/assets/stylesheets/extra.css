@@ -1,0 +1,205 @@
+body { font-size: 16px; line-height: 1.75; }
+.container { max-width: 1180px; }
+.kb-card { border: 1px solid #dddddd; border-radius: 14px; padding: 1rem; margin: 1rem 0 1.25rem 0; background: #ffffff; box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06); }
+.kb-badge { display: inline-block; padding: 0.12rem 0.48rem; margin: 0 0.18rem 0.18rem 0; border-radius: 999px; background: #eef2ff; color: #3730a3; font-size: 0.82rem; font-weight: 700; }
+.interactive-card { margin: 1.5rem 0 2rem 0; padding: 0.75rem; border: 1px solid #dddddd; border-radius: 14px; background: #ffffff; box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08); }
+.interactive-title { font-weight: 700; margin: 0.25rem 0 0.75rem 0.25rem; }
+.interactive-frame { width: 100%; height: 900px; border: 0; border-radius: 10px; background: white; }
+.interactive-frame.medium { height: 660px; }
+.interactive-frame.large { height: 760px; }
+.media-caption { color: #666666; font-size: 0.9rem; text-align: center; margin-top: 0.25rem; }
+table { font-size: 0.95rem; }
+@media screen and (max-width: 768px) { .interactive-frame { height: 980px; } .interactive-frame.medium { height: 620px; } .interactive-frame.large { height: 680px; } }
+
+/* =========================================================
+   MkDocs 默认主题左侧边栏安全修复版
+   适用：theme: name: mkdocs
+
+   使用方法：
+   1. 删除此前加入的 sidebar-fix-v3.js，不要再用 JS 强制改侧栏样式。
+   2. 删除此前 CSS 中针对 .container > .row 改 flex 的规则。
+   3. 将本段追加到 docs/assets/stylesheets/extra.css 末尾。
+
+   解决：
+   - 正文长时，左侧目录固定在视口内。
+   - 左侧目录自身可以滚动。
+   - 半屏/窄屏时不覆盖正文。
+   - 长目录标题按侧栏宽度换行，不再截断。
+   ========================================================= */
+
+:root {
+  --kb-sidebar-top: 1rem;
+  --kb-sidebar-bottom-gap: 1rem;
+  --kb-sidebar-link-x: 0.75rem;
+  --kb-sidebar-child-x: 1.25rem;
+}
+
+/* ---------------------------------------------------------
+   先撤销此前错误版本可能留下的 flex 布局影响。
+   让 MkDocs / Bootstrap 原本的栅格布局恢复正常。
+   --------------------------------------------------------- */
+
+.container > .row {
+  display: block !important;
+}
+
+@media screen and (min-width: 992px) {
+  .container > .row > .col-md-3 {
+    float: left !important;
+    width: 25% !important;
+    max-width: 25% !important;
+    min-width: 0 !important;
+    flex: none !important;
+  }
+
+  .container > .row > .col-md-9 {
+    float: left !important;
+    width: 75% !important;
+    max-width: 75% !important;
+    min-width: 0 !important;
+    flex: none !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   桌面端：把 sticky 放在左侧列本身，而不是放在 .bs-sidebar 上。
+   这样不会产生 fixed 覆盖正文的问题。
+   --------------------------------------------------------- */
+
+@media screen and (min-width: 992px) {
+  .container > .row > .col-md-3 {
+    position: sticky !important;
+    top: var(--kb-sidebar-top) !important;
+    max-height: calc(100dvh - var(--kb-sidebar-top) - var(--kb-sidebar-bottom-gap)) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  .bs-sidebar,
+  .bs-sidebar.affix,
+  .bs-sidebar.affix-top,
+  .bs-sidebar.affix-bottom {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   窄屏端：恢复上下排列，禁止侧栏固定或覆盖正文。
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 991.98px) {
+  .container > .row {
+    display: block !important;
+  }
+
+  .container > .row > .col-md-3,
+  .container > .row > .col-md-9 {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    flex: none !important;
+  }
+
+  .container > .row > .col-md-3 {
+    margin-bottom: 1rem !important;
+  }
+
+  .bs-sidebar,
+  .bs-sidebar.affix,
+  .bs-sidebar.affix-top,
+  .bs-sidebar.affix-bottom {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   侧栏长标题换行。
+   注意：不用 word-break: break-all，避免英文单词被强行切碎。
+   --------------------------------------------------------- */
+
+.bs-sidebar,
+.bs-sidebar * {
+  box-sizing: border-box !important;
+}
+
+.bs-sidebar,
+.bs-sidebar .nav,
+.bs-sidebar .bs-sidenav,
+.bs-sidebar ul,
+.bs-sidebar ol,
+.bs-sidebar li {
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+.bs-sidebar li {
+  overflow: visible !important;
+}
+
+.bs-sidebar a,
+.bs-sidebar .nav > li > a,
+.bs-sidebar .nav .nav > li > a,
+.bs-sidebar .bs-sidenav > li > a,
+.bs-sidebar .bs-sidenav .nav > li > a {
+  display: block !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  word-break: normal !important;
+  line-height: 1.45 !important;
+  padding-right: var(--kb-sidebar-link-x) !important;
+}
+
+.bs-sidebar .nav > li > a,
+.bs-sidebar .bs-sidenav > li > a {
+  padding-left: var(--kb-sidebar-link-x) !important;
+}
+
+.bs-sidebar .nav .nav > li > a,
+.bs-sidebar .bs-sidenav .nav > li > a {
+  padding-left: var(--kb-sidebar-child-x) !important;
+}
+
+/* ---------------------------------------------------------
+   正文区域防溢出：只处理真正容易撑破布局的内容。
+   不改变正文列宽，不改变 Bootstrap 栅格。
+   --------------------------------------------------------- */
+
+.col-md-9 {
+  min-width: 0 !important;
+}
+
+.col-md-9 pre {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+}
+
+.col-md-9 table {
+  max-width: 100% !important;
+}

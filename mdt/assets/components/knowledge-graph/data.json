@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {
+      "id": "cache",
+      "label": "缓存层",
+      "type": "layer"
+    },
+    {
+      "id": "research",
+      "label": "研究层",
+      "type": "layer"
+    },
+    {
+      "id": "deep",
+      "label": "深度层",
+      "type": "layer"
+    },
+    {
+      "id": "md",
+      "label": "Markdown",
+      "type": "asset"
+    },
+    {
+      "id": "iframe",
+      "label": "iframe HTML",
+      "type": "asset"
+    },
+    {
+      "id": "json",
+      "label": "JSON/JSONL",
+      "type": "asset"
+    },
+    {
+      "id": "delete",
+      "label": "直接删除",
+      "type": "action"
+    }
+  ],
+  "edges": [
+    {
+      "source": "cache",
+      "target": "research",
+      "relation": "promote"
+    },
+    {
+      "source": "research",
+      "target": "deep",
+      "relation": "extract"
+    },
+    {
+      "source": "md",
+      "target": "research",
+      "relation": "write"
+    },
+    {
+      "source": "iframe",
+      "target": "cache",
+      "relation": "capture"
+    },
+    {
+      "source": "json",
+      "target": "deep",
+      "relation": "index"
+    },
+    {
+      "source": "delete",
+      "target": "cache",
+      "relation": "clean"
+    }
+  ]
+}
