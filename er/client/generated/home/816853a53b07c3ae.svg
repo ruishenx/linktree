@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Final violet symmetric logo</title>
+  <desc id="desc">A fully symmetric logo in violet, with continuous horizontal dash spacing and exact bilateral symmetry both horizontally and vertically.</desc>
+  <defs>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2D2D2D"/>
+      <stop offset="100%" stop-color="#151515"/>
+    </linearGradient>
+    <linearGradient id="violetGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8F00FF"/>
+      <stop offset="100%" stop-color="#6C00C4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Verified symmetry:
+       1) left-right mirror symmetry about x = 500
+       2) top-bottom mirror symmetry about y = 350
+       3) small dash length = 20
+       4) dash gap = 12.36 = 0.618 * 20
+       5) center circle radius = 20
+       6) nearest dash distance from center = 60 = 3 * 20
+       7) horizontal dashes are continuous, not split into 3/3/3 groups
+       8) terminal perpendicular end-caps connect directly to the dashed axes
+  -->
+
+  <g fill="none" stroke="url(#darkGrad)" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M 338.56 170.00 H 300.56 V 530.00 H 338.56"/>
+    <path d="M 661.44 170.00 H 699.44 V 530.00 H 661.44"/>
+  </g>
+
+  <g stroke="url(#darkGrad)" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M 420.00 245.00 L 388.00 245.00 L 388.00 277.00"/>
+    <path d="M 580.00 245.00 L 612.00 245.00 L 612.00 277.00"/>
+    <path d="M 388.00 423.00 L 388.00 455.00 L 420.00 455.00"/>
+    <path d="M 612.00 423.00 L 612.00 455.00 L 580.00 455.00"/>
+  </g>
+
+  <g stroke="#1F1F1F" stroke-width="4" stroke-linecap="square">
+    <line x1="500.00" y1="270.00" x2="500.00" y2="290.00"/>
+    <line x1="500.00" y1="237.64" x2="500.00" y2="257.64"/>
+    <line x1="500.00" y1="205.28" x2="500.00" y2="225.28"/>
+    <line x1="500.00" y1="172.92" x2="500.00" y2="192.92"/>
+    <line x1="500.00" y1="140.56" x2="500.00" y2="160.56"/>
+    <line x1="500.00" y1="108.20" x2="500.00" y2="128.20"/>
+    <line x1="500.00" y1="75.84" x2="500.00" y2="95.84"/>
+    <line x1="500.00" y1="410.00" x2="500.00" y2="430.00"/>
+    <line x1="500.00" y1="442.36" x2="500.00" y2="462.36"/>
+    <line x1="500.00" y1="474.72" x2="500.00" y2="494.72"/>
+    <line x1="500.00" y1="507.08" x2="500.00" y2="527.08"/>
+    <line x1="500.00" y1="539.44" x2="500.00" y2="559.44"/>
+    <line x1="500.00" y1="571.80" x2="500.00" y2="591.80"/>
+    <line x1="500.00" y1="604.16" x2="500.00" y2="624.16"/>
+  </g>
+
+  <g stroke="#1F1F1F" stroke-width="4" stroke-linecap="square">
+    <line x1="420.00" y1="350.00" x2="440.00" y2="350.00"/>
+    <line x1="387.64" y1="350.00" x2="407.64" y2="350.00"/>
+    <line x1="355.28" y1="350.00" x2="375.28" y2="350.00"/>
+    <line x1="322.92" y1="350.00" x2="342.92" y2="350.00"/>
+    <line x1="290.56" y1="350.00" x2="310.56" y2="350.00"/>
+    <line x1="258.20" y1="350.00" x2="278.20" y2="350.00"/>
+    <line x1="225.84" y1="350.00" x2="245.84" y2="350.00"/>
+    <line x1="193.48" y1="350.00" x2="213.48" y2="350.00"/>
+    <line x1="161.12" y1="350.00" x2="181.12" y2="350.00"/>
+    <line x1="560.00" y1="350.00" x2="580.00" y2="350.00"/>
+    <line x1="592.36" y1="350.00" x2="612.36" y2="350.00"/>
+    <line x1="624.72" y1="350.00" x2="644.72" y2="350.00"/>
+    <line x1="657.08" y1="350.00" x2="677.08" y2="350.00"/>
+    <line x1="689.44" y1="350.00" x2="709.44" y2="350.00"/>
+    <line x1="721.80" y1="350.00" x2="741.80" y2="350.00"/>
+    <line x1="754.16" y1="350.00" x2="774.16" y2="350.00"/>
+    <line x1="786.52" y1="350.00" x2="806.52" y2="350.00"/>
+    <line x1="818.88" y1="350.00" x2="838.88" y2="350.00"/>
+  </g>
+
+  <g stroke="#1F1F1F" stroke-width="4" stroke-linecap="square">
+    <line x1="480.00" y1="75.84" x2="520.00" y2="75.84"/>
+    <line x1="480.00" y1="624.16" x2="520.00" y2="624.16"/>
+    <line x1="161.12" y1="329.00" x2="161.12" y2="371.00"/>
+    <line x1="838.88" y1="329.00" x2="838.88" y2="371.00"/>
+  </g>
+
+  <circle cx="500.00" cy="350.00" r="20.00" fill="url(#violetGrad)" stroke="#6C00C4" stroke-width="2"/>
+</svg>

@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.1.3"><title>Practical Information Theory: From Shannon Communication to Human Decisions — Examen Rationis</title><meta name="description" content="An evidence-bounded introduction that maps sources, encoding, noise, decoding, decisions, and feedback into a trainable human information system."><link rel="canonical" href="https://clearframe-letter.robbie233.chatgpt.site/p/0-info-theory-intro/"><link rel="icon" href="/generated/home/6428013c580f1d25.svg"><meta property="og:type" content="article"><meta property="og:site_name" content="认识论与信息论"><meta property="og:title" content="Practical Information Theory: From Shannon Communication to Human Decisions — Examen Rationis"><meta property="og:description" content="An evidence-bounded introduction that maps sources, encoding, noise, decoding, decisions, and feedback into a trainable human information system."><meta property="og:url" content="https://clearframe-letter.robbie233.chatgpt.site/p/0-info-theory-intro/"><meta property="og:image" content="https://clearframe-letter.robbie233.chatgpt.site/generated/pages/information/post/0-info-theory-intro/ae9d35c2b9dfd114.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Practical Information Theory: From Shannon Communication to Human Decisions — Examen Rationis"><meta name="twitter:description" content="An evidence-bounded introduction that maps sources, encoding, noise, decoding, decisions, and feedback into a trainable human information system."><meta name="twitter:image" content="https://clearframe-letter.robbie233.chatgpt.site/generated/pages/information/post/0-info-theory-intro/ae9d35c2b9dfd114.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"信息论实践简介","description":"An evidence-bounded introduction that maps sources, encoding, noise, decoding, decisions, and feedback into a trainable human information system.","author":[{"@type":"Person","name":"Ruishen","url":"https://clearframe-letter.robbie233.chatgpt.site/about/"}],"datePublished":"2026-07-29","dateModified":"2026-07-29","image":"https://clearframe-letter.robbie233.chatgpt.site/generated/pages/information/post/0-info-theory-intro/ae9d35c2b9dfd114.png","keywords":["information theory","Shannon model","information literacy","decision making","systems thinking"],"publisher":{"@type":"Organization","name":"认识论与信息论","logo":{"@type":"ImageObject","url":"https://clearframe-letter.robbie233.chatgpt.site/generated/home/6428013c580f1d25.svg"}},"mainEntityOfPage":"https://clearframe-letter.robbie233.chatgpt.site/p/0-info-theory-intro/"}</script><link rel="stylesheet" href="/_astro/BaseLayout.B33zZUBM.css"></head><body id="page-top"><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="site-header__inner"><a class="brand" href="/" aria-label="认识论与信息论 home"><img src="/generated/home/6428013c580f1d25.svg" alt="" width="32" height="32"><span>认识论与信息论</span></a><nav class="site-nav" aria-label="Primary navigation"><ul><li><a href="/">Home</a></li><li><a href="/epistemology/">Epistemology</a></li><li><a href="/information/">Information Theory</a></li><li><a href="/about/">About</a></li></ul></nav></div></header><main id="main-content"><article class="post"><header class="post-header"><a class="post-header__identity" href="/">认识论与信息论</a><h1>信息论实践简介</h1><p class="post-header__subtitle">用于培养和训练信息能力</p><p class="post-header__dek">信息论的工程应用，在人类决策行为上具有指导意义。</p><div class="post-header__meta"><span>By Ruishen</span><span aria-hidden="true">•</span><time datetime="2026-07-29">2026年7月29日</time><span aria-hidden="true">•</span><span>3 min read</span></div><ul class="tag-list" aria-label="Article topics"><li>information theory</li><li>Shannon model</li><li>information literacy</li><li>decision making</li><li>systems thinking</li></ul></header><figure class="post-cover"><img src="/generated/pages/information/post/0-info-theory-intro/ae9d35c2b9dfd114.png" alt="Schematic diagram of a general communication system." width="1200" height="720"><figcaption>Schematic diagram of a general communication system.<span> — A Mathematical Theory of Communication</span></figcaption></figure><div class="post-body"><div class="article-prose"><h2 id="定义与问题" class="article-prose__heading">定义与问题</h2>
+<p class="article-prose__paragraph">信息的定义随研究目的而变化。本文从<strong>判断与决策</strong>出发，采用一个操作性定义：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph">在给定问题、先验知识和行动集合下，凡是能够改变合理信念分布，或改变行动排序的内容，都可视为信息。</p>
+</blockquote>
+<p class="article-prose__paragraph">这个定义比“凡能减少不确定性的事物都是信息”多了两个边界：第一，信息量必须相对于具体问题衡量；第二，减少一般不确定性不必然改善决策。某条消息可能很新奇，却与当前行动无关；也可能使人更确信，但这种确信来自错误编码或共同偏差。</p>
+<p class="article-prose__paragraph">封面图来自 Claude Elwood Shannon 1948 年发表的 <em>A Mathematical Theory of Communication</em>（<a href="/generated/pages/information/post/0-info-theory-intro/6e4e3411984f3edf.pdf">英文原文</a>，<a href="/generated/pages/information/post/0-info-theory-intro/361cb83a5cd1ba8d.pdf">中文译文</a>）。Shannon 的贡献是把消息选择、编码、信道容量与噪声问题形式化；其工程理论刻意不处理消息的语义价值，因此本文是在该模型之上做<strong>人类信息能力的类比扩展</strong>，而不是把通信熵直接等同于真理、知识或效用。<sup><a href="#user-content-fn-shannon" id="user-content-fnref-shannon" data-footnote-ref="" aria-describedby="user-content-footnote-label">1</a></sup></p>
+<p class="article-prose__paragraph">现代信息环境降低了内容复制和传播成本，但“内容更多”不能推出“决策相关信息同比增加”。人在注意力、记忆和计算能力上受到约束，来源可信度、编码损耗、重复传播和激励结构都会影响最终判断。<sup><a href="#user-content-fn-simon" id="user-content-fnref-simon" data-footnote-ref="" aria-describedby="user-content-footnote-label">2</a></sup><sup><a href="#user-content-fn-heuristics" id="user-content-fnref-heuristics" data-footnote-ref="" aria-describedby="user-content-footnote-label">3</a></sup> 因此，训练重点不是无限增加输入，而是提高从证据生成到行动反馈的闭环质量。</p>
+<h2 id="描述证明与例子" class="article-prose__heading">描述、证明与例子</h2>
+<h3 id="模型映射与研究范围" class="article-prose__heading">模型映射与研究范围</h3>
+<p class="article-prose__paragraph">Shannon 的一般通信结构为：</p>
+<div class="article-prose__html-block">
+  <span>Source</span>
+  <span>→</span>
+  <span>Transmitter</span>
+  <span>→</span>
+  <span>Channel + Noise</span>
+  <span>→</span>
+  <span>Receiver</span>
+  <span>→</span>
+  <span>Destination</span>
+</div>
+<p class="article-prose__paragraph">映射到人类能力后：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-prose__table-wrap" role="region" aria-label="Scrollable table" tabindex="0"><table><thead><tr><th>模块</th><th>人类能力映射</th><th>防御端问题</th><th>攻击端问题</th></tr></thead><tbody><tr><td><a href="/p/1-source/">信源 Source</a></td><td>生成与选择证据</td><td>如何识别来源质量与共同依赖</td><td>如何生产、选择和组织证据</td></tr><tr><td><a href="/p/2-transmitter/">发送器 Transmitter</a></td><td>编码与表达</td><td>如何恢复被压缩、重排或隐藏的内容</td><td>如何在带宽约束下设计可恢复表达</td></tr><tr><td><a href="/p/3-noise/">噪声 Noise</a></td><td>干扰、污染与误差</td><td>如何区分随机、系统性和对抗性噪声</td><td>如何在合法演练中测试系统抗扰性</td></tr><tr><td><a href="/p/4-receiver/">接收器 Receiver</a></td><td>解码、推断与反演</td><td>如何从观测恢复主张、证据与机制</td><td>如何设计不易被合理误解的表达</td></tr><tr><td><a href="/p/5-destination/">信宿 Destination</a></td><td>决策、执行与反馈</td><td>如何在不完备信息下控制损失</td><td>如何通过选项、激励和时机影响决策环境</td></tr></tbody></table></div>
+<p class="article-prose__paragraph">人类系统不是线性管道。行动会改变现实，结果又成为新的数据；个人既可能是接收者，也可能同时生产噪声。完整闭环及接口见后文。</p>
+<h2 id="概念与定理-concepts--theorems" class="article-prose__heading">概念与定理 Concepts &#x26; Theorems</h2>
+<p class="article-prose__paragraph">假定一个可能事件集的概率为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>p</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>p</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">p_1,p_2,\ldots,p_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。在只知道这些概率、尚不知道哪一事件会发生时，希望定义不确定性度量 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><msub><mi>p</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(p_1,\ldots,p_n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。Shannon 给出的公理包括：</p>
+<ol class="article-prose__list">
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span> 关于各 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">p_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 连续；</li>
+<li>当所有事件等概率时，可能事件越多，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span> 越大；</li>
+<li>若一次选择可分解为连续选择，总不确定性应等于分阶段不确定性的加权和。</li>
+</ol>
+<p class="article-prose__paragraph">在常数因子之外，满足这些条件的形式为：</p>
+<div class="article-prose__html-block">
+  <span><i>H</i>(<i>X</i>)</span>
+  <span>=</span>
+  <span>−<i>K</i></span>
+  <span>∑<sub><i>i</i>=1</sub><sup><i>n</i></sup></span>
+  <span><i>p</i><sub><i>i</i></sub> log <i>p</i><sub><i>i</i></sub></span>
+</div>
+<p class="article-prose__paragraph">其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>></mo><mn>0</mn></mrow><annotation encoding="application/x-tex">K>0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 只决定单位。若以 2 为对数底且 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">K=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>，单位为 bit。<sup><a href="#user-content-fn-shannon" id="user-content-fnref-shannon-2" data-footnote-ref="" aria-describedby="user-content-footnote-label">1</a></sup></p>
+<p class="article-prose__paragraph">对于二元事件，概率分别为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>1</mn><mo>−</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">q=1-p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span>：</p>
+<div class="article-prose__html-block">
+  <span><i>H</i>(<i>p</i>)</span>
+  <span>=</span>
+  <span>−(</span>
+  <span><i>p</i> log <i>p</i></span>
+  <span>+</span>
+  <span><i>q</i> log <i>q</i></span>
+  <span>)</span>
+</div>
+<figure class="article-prose__figure"><img src="/generated/pages/information/post/0-info-theory-intro/cff0bfcbfa24081d.png" alt="Entropy in the case of two possibilities with probabilities p and (1 - p)." loading="lazy" decoding="async"></figure>
+<p class="article-prose__paragraph">它具有以下重要性质：</p>
+<ol class="article-prose__list">
+<li>
+<p class="article-prose__paragraph">当且仅当某一结果概率为 1、其余为 0 时，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">H=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>；</p>
+</li>
+<li>
+<p class="article-prose__paragraph">在给定结果数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 时，均匀分布使熵达到最大值 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\log n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mop">lo<span style="margin-right:0.0139em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span></span></span></span>；</p>
+</li>
+<li>
+<p class="article-prose__paragraph">联合熵满足 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi>Y</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>H</mi><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo><mo>+</mo><mi>H</mi><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(X,Y)\le H(X)+H(Y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0785em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">Y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0785em;">X</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.2222em;">Y</span><span class="mclose">)</span></span></span></span>，等号在独立时成立；</p>
+</li>
+<li>
+<p class="article-prose__paragraph">条件熵满足 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>Y</mi><mo>∣</mo><mi>X</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>H</mi><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(Y\mid X)\le H(Y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.2222em;">Y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0785em;">X</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.2222em;">Y</span><span class="mclose">)</span></span></span></span>，知道 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0785em;">X</span></span></span></span> 平均不会增加对 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">Y</span></span></span></span> 的不确定性；</p>
+</li>
+<li>
+<p class="article-prose__paragraph">互信息</p>
+<div class="article-prose__html-block">
+  <span><i>I</i>(<i>X</i>; <i>Y</i>)</span>
+  <span>=</span>
+  <span><i>H</i>(<i>Y</i>)</span>
+  <span>−</span>
+  <span><i>H</i>(<i>Y</i> ∣ <i>X</i>)</span>
+</div>
+<p class="article-prose__paragraph">衡量观察 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0785em;">X</span></span></span></span> 后对 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">Y</span></span></span></span> 不确定性的平均减少量。</p>
+</li>
+</ol>
+<details>
+<summary><strong>为什么“最大熵”不自动推出“抛硬币”</strong></summary>
+<p class="article-prose__paragraph">当多个行动在现有信息下难以区分时，随机化可能是一致且无偏的规则，但必须同时满足：</p>
+<ul class="article-prose__list">
+<li>比较的是<strong>行动的期望损失</strong>，而不仅是世界状态的熵；</li>
+<li>备选行动不存在未建模的灾难性尾部风险；</li>
+<li>继续取证的成本高于其期望信息价值；</li>
+<li>随机化不违反法律、伦理、责任和协调约束；</li>
+<li>随机化本身能够带来公平性或不可预测性收益。</li>
+</ul>
+<p class="article-prose__paragraph">因此，熵描述不确定性，不直接给出价值函数。决策还需要概率、效用、约束与时间成本。</p>
+</details>
+<h2 id="批判性边界" class="article-prose__heading">批判性边界</h2>
+<h3 id="1-数学信息不等于语义真理" class="article-prose__heading">1. 数学信息不等于语义真理</h3>
+<p class="article-prose__paragraph">通信理论关心符号序列的可编码与可恢复性。一条稳定传播的虚假命题也可以具有明确的 Shannon 信息量；一条语义极重要的消息也可能只包含很少 bit。由熵直接推出“真、善、重要”属于范畴错误。</p>
+<h3 id="2-降低不确定性不等于提高认识质量" class="article-prose__heading">2. 降低不确定性不等于提高认识质量</h3>
+<p class="article-prose__paragraph">错误来源、选择性样本和强叙事也能让人主观上更确定。批判性训练必须同时检查：证据生成机制、替代解释、损失函数和反证条件。</p>
+<h3 id="3-该映射是工程脚手架不是完整的人类理论" class="article-prose__heading">3. 该映射是工程脚手架，不是完整的人类理论</h3>
+<p class="article-prose__paragraph">身体状态、情绪、身份、权力、制度和非符号互动无法被五模块完全描述。模型的价值在于暴露接口与错误位置；当问题主要由价值冲突、强制关系或物理资源决定时，应引入伦理学、政治经济学、心理学和组织理论。</p>
+<h2 id="防御能力个人作为-destination-一端如何使用总模型" class="article-prose__heading">防御能力：个人作为 Destination 一端如何使用总模型</h2>
+<p class="article-prose__paragraph">防御端每次问：</p>
+<ul class="article-prose__list">
+<li>我接触的是现实、数据、模型还是叙事？</li>
+<li>哪一环节可能丢失、重排或伪造了信息？</li>
+<li>多个来源是否真正独立？</li>
+<li>当前置信度和行动阈值是否匹配？</li>
+<li>错误来自信源、编码、噪声、解码，还是价值与执行？</li>
+</ul>
+<p class="article-prose__paragraph">防御的最小动作是：把结论退回到证据链，把确定语气退回到概率，把行动退回到损失和可逆性。</p>
+<h2 id="攻击能力个人作为-source-一端如何使用总模型" class="article-prose__heading">攻击能力：个人作为 Source 一端如何使用总模型</h2>
+<p class="article-prose__paragraph">攻击端每次问：</p>
+<ul class="article-prose__list">
+<li>哪些事实与边界必须保留，才不会使表达变成欺骗？</li>
+<li>哪种编码能让目标受众在真实噪声下正确恢复？</li>
+<li>哪些对抗样本能在封闭环境中暴露系统弱点？</li>
+<li>如何通过选项、承诺、顺序与反馈提高协调效率？</li>
+<li>如何让结果可记录、可纠错并反馈到上游？</li>
+</ul>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph">本系列中的“攻击”指合法的主动设计、竞争分析与红队测试，不包括伪造证据、冒充身份、恶意操纵公共安全或破坏他人系统。</p>
+</blockquote>
+<h2 id="面向上下环节的接口与工作机制" class="article-prose__heading">面向上下环节的接口与工作机制</h2>
+<p class="article-prose__paragraph">总览模块向五篇分模块文章提供共同接口：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-prose__table-wrap" role="region" aria-label="Scrollable table" tabindex="0"><table><thead><tr><th>字段</th><th>含义</th></tr></thead><tbody><tr><td>Question</td><td>要降低哪一种不确定性</td></tr><tr><td>Evidence</td><td>证据、来源和依赖关系</td></tr><tr><td>Encoding</td><td>表达形式、压缩与受众</td></tr><tr><td>Noise</td><td>随机、系统与对抗误差</td></tr><tr><td>Interpretation</td><td>最佳解释、竞争解释与置信度</td></tr><tr><td>Decision</td><td>行动、损失、权限和可逆性</td></tr><tr><td>Feedback</td><td>结果、校准、修订与停止条件</td></tr></tbody></table></div>
+<pre class="mermaid article-prose__mermaid" tabindex="0" aria-label="Mermaid diagram">flowchart LR
+    S["信源"] --> T["发送器"]
+    T --> N["噪声"]
+    N --> R["接收器"]
+    R --> D["信宿"]
+    D --> O["结果"]
+    O -. 反馈 .-> S</pre>
+<p class="article-prose__paragraph">运行时先界定问题和行动，再依次检查证据、编码、噪声、解释和决策；结果必须返回信源，修正数据、模型与规则。</p>
+<section data-footnotes="" class="footnotes"><h2 class="sr-only article-prose__heading" id="user-content-footnote-label">Footnotes</h2>
+<ol class="article-prose__list">
+<li id="user-content-fn-shannon">
+<p class="article-prose__paragraph">Claude E. Shannon, “A Mathematical Theory of Communication,” <em>Bell System Technical Journal</em> 27 (1948), 379–423, 623–656；本项目收录<a href="/generated/pages/information/post/0-info-theory-intro/6e4e3411984f3edf.pdf">英文原文</a>与<a href="/generated/pages/information/post/0-info-theory-intro/361cb83a5cd1ba8d.pdf">中文译文</a>。 <a href="#user-content-fnref-shannon" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-shannon-2" data-footnote-backref="" aria-label="Back to reference 1-2" class="data-footnote-backref">↩<sup>2</sup></a></p>
+</li>
+<li id="user-content-fn-simon">
+<p class="article-prose__paragraph">Herbert A. Simon, “A Behavioral Model of Rational Choice,” <em>Quarterly Journal of Economics</em> 69(1), 1955, <a href="https://doi.org/10.2307/1884852" rel="noopener noreferrer">https://doi.org/10.2307/1884852</a>。 <a href="#user-content-fnref-simon" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-heuristics">
+<p class="article-prose__paragraph">Amos Tversky and Daniel Kahneman, “Judgment under Uncertainty: Heuristics and Biases,” <em>Science</em> 185(4157), 1974, <a href="https://doi.org/10.1126/science.185.4157.1124" rel="noopener noreferrer">https://doi.org/10.1126/science.185.4157.1124</a>。 <a href="#user-content-fnref-heuristics" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section></div></div><footer class="post-end"><div class="post-end__rule" aria-hidden="true">ER</div><p class="updated-note">Last updated <time datetime="2026-07-29">2026年7月29日</time>.</p></footer></article><section id="subscribe" class="subscribe-cta subscribe-cta--band" aria-labelledby="subscribe-title-band"><div class="subscribe-cta__inner"><div class="subscribe-cta__copy"><p class="section-kicker">A note worth keeping</p><h2 id="subscribe-title-band">Make room for one clear idea.</h2><p>A considered essay every other Thursday. No feed to keep up with.</p></div></div></section><section class="more-reading page-shell" aria-labelledby="more-reading-title"><div class="section-heading section-heading--compact"><p class="section-kicker">Keep reading</p><h2 id="more-reading-title">Two more field notes</h2></div><div class="post-list"><article class="post-list-item"><div class="post-list-item__copy"><div class="post-list-item__meta"><time datetime="2026-07-29">2026年7月29日</time></div><h3><a href="/p/1-source/">信源</a></h3><p>如何产生高质量信息与伪高质量信息</p><span class="post-list-item__byline">By Ruishen</span></div></article><article class="post-list-item"><div class="post-list-item__copy"><div class="post-list-item__meta"><time datetime="2026-07-29">2026年7月29日</time></div><h3><a href="/p/self-referential-information-systems/">自指问题的信息系统</a></h3><p>识别不同类型的自指与循环结构，并从防御和攻击两端设计处理机制。</p><span class="post-list-item__byline">By Ruishen</span></div></article></div></section></main><footer class="site-footer"><div class="site-footer__inner"><div class="site-footer__brand"><p class="site-footer__name">认识论与信息论</p><p>Clear ideas for building things that last.</p></div><nav aria-label="Footer navigation"><ul><li><a href="/principles/">Editorial principles</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/rss.xml">RSS</a></li></ul></nav><p class="site-footer__copyright">© 2026 Ruishen</p></div></footer><a class="back-to-top" href="#page-top" aria-label="Back to top"><span aria-hidden="true">↑</span></a><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.O89MgBga.js"></script></body></html>
