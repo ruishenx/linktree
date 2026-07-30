@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://clearframe-letter.robbie233.chatgpt.site/sitemap-index.xml
+Sitemap: https://ruishenx.github.io/linktree/er/sitemap-index.xml

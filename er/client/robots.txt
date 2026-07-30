@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://clearframe-letter.robbie233.chatgpt.site/sitemap-index.xml
