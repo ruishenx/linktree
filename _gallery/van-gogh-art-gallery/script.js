@@ -1,1 +1,0 @@
-// Not device responsive
