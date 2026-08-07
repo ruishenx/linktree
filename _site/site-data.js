@@ -5341,8 +5341,8 @@ window.SITE_DATA = {
       "icon": "<svg version=\"1.0\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100.000000 100.000000\" preserveAspectRatio=\"xMidYMid meet\"> <g transform=\"translate(0.000000,100.000000) scale(0.100000,-0.100000)\" fill=\"currentColor\" stroke=\"none\"> <path d=\"M57 862 c-14 -15 -17 -40 -17 -120 l0 -102 460 0 460 0 0 103 c0 88 -3 106 -18 120 -17 15 -62 17 -444 17 -399 0 -426 -1 -441 -18z m133 -77 c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0 23 -7 30 -15z m120 0 c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0 23 -7 30 -15z m550 -25 l0 -40 -240 0 -240 0 0 40 0 40 240 0 240 0 0 -40z\"/> <path d=\"M42 363 l3 -238 231 -3 232 -2 -14 37 c-60 170 81 363 266 363 53 0 125 -24 165 -55 l35 -26 0 80 0 81 -460 0 -460 0 2 -237z\"/> <path d=\"M680 467 c-49 -16 -133 -102 -148 -153 -28 -94 -8 -169 63 -239 70 -71 145 -91 239 -63 55 16 138 99 154 154 26 89 9 163 -55 234 -65 72 -158 97 -253 67z m98 -40 c6 -6 13 -24 17 -40 7 -26 6 -27 -34 -27 -46 0 -54 17 -25 58 17 25 27 27 42 9z m-88 -11 c0 -3 -4 -16 -10 -30 -8 -22 -16 -26 -47 -26 l-38 1 35 29 c30 26 60 39 60 26z m200 -26 l35 -29 -38 -1 c-31 0 -39 4 -47 26 -13 32 -13 34 3 34 7 0 28 -13 47 -30z m-230 -100 c0 -29 -1 -30 -51 -30 -43 0 -50 3 -45 16 3 9 6 22 6 30 0 10 13 14 45 14 43 0 45 -1 45 -30z m158 -2 c3 -28 3 -28 -57 -28 -57 0 -61 1 -61 23 0 34 8 38 65 35 46 -3 50 -5 53 -30z m132 18 c0 -8 3 -21 6 -30 5 -13 -2 -16 -45 -16 -50 0 -51 1 -51 30 0 29 2 30 45 30 32 0 45 -4 45 -14z m-290 -116 c0 -29 -2 -30 -45 -30 -32 0 -45 4 -45 14 0 8 -3 21 -6 30 -5 13 2 16 45 16 50 0 51 -1 51 -30z m158 3 c-3 -27 -5 -28 -58 -28 -53 0 -55 1 -58 28 -3 27 -3 27 58 27 61 0 61 0 58 -27z m138 11 c-3 -9 -6 -22 -6 -30 0 -10 -13 -14 -45 -14 -43 0 -45 1 -45 30 0 29 1 30 51 30 43 0 50 -3 45 -16z m-276 -110 c13 -32 13 -34 -3 -34 -7 0 -28 13 -47 30 l-35 29 38 1 c31 0 39 -4 47 -26z m115 -1 c-3 -16 -13 -35 -21 -43 -12 -13 -16 -13 -28 0 -8 8 -18 27 -21 43 -7 26 -6 27 35 27 41 0 42 -1 35 -27z m95 -3 c-19 -17 -40 -30 -47 -30 -16 0 -16 2 -3 34 8 22 16 26 47 26 l38 -1 -35 -29z\"/> </g> </svg>",
       "sections": [
         {
-          "id": "personal",
-          "title": "技术博客",
+          "id": "starred",
+          "title": "星标",
           "items": [
             {
               "title": "Andy Sloane",
@@ -5352,8 +5352,8 @@ window.SITE_DATA = {
               "svg": ""
             },
             {
-              "title": "andreinc",
-              "url": "https://www.andreinc.net/",
+              "title": "balajis.com",
+              "url": "https://balajis.com/",
               "status": "NoGFW",
               "image": "",
               "svg": ""
@@ -5361,27 +5361,6 @@ window.SITE_DATA = {
             {
               "title": "Brendan Bycroft",
               "url": "https://bbycroft.net/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "Become Sovran",
-              "url": "https://becomesovran.com/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "Charlie Clark",
-              "url": "https://www.builtby.cc/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "晨旭的博客",
-              "url": "https://www.chenxublog.com/",
               "status": "NoGFW",
               "image": "",
               "svg": ""
@@ -5401,27 +5380,6 @@ window.SITE_DATA = {
               "svg": ""
             },
             {
-              "title": "CXPLAY World",
-              "url": "https://blog.cxplay.org/",
-              "status": "Worldwide",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "蛮荆",
-              "url": "https://dbwu.tech/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "Adam Dunkels",
-              "url": "https://dunkels.com/adam/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
               "title": "Federico Busato",
               "url": "https://federico-busato.github.io/",
               "status": "NoGFW",
@@ -5432,27 +5390,6 @@ window.SITE_DATA = {
               "title": "Maps Mania",
               "url": "https://googlemapsmania.blogspot.com/",
               "status": "Worldwide",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "Harttle Land",
-              "url": "https://harttle.land/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "惜时如命",
-              "url": "https://iamazing.cn/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "Jimmy知识星球",
-              "url": "http://www.jimmyxuexue.top/",
-              "status": "NoGFW",
               "image": "",
               "svg": ""
             },
@@ -5471,27 +5408,6 @@ window.SITE_DATA = {
               "svg": ""
             },
             {
-              "title": "Long Luo's Life Notes",
-              "url": "https://www.longluo.me/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "生信技术",
-              "url": "https://lxz9.com/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "毛若昕 | 静水流深",
-              "url": "https://maorx.cn/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
               "title": "Meat Fighter",
               "url": "https://meatfighter.com/",
               "status": "NoGFW",
@@ -5502,13 +5418,6 @@ window.SITE_DATA = {
               "title": "Neal.fun",
               "url": "https://neal.fun/",
               "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "Lance's Blog",
-              "url": "https://rlancemartin.github.io/",
-              "status": "Worldwide",
               "image": "",
               "svg": ""
             },
@@ -5548,20 +5457,6 @@ window.SITE_DATA = {
               "svg": ""
             },
             {
-              "title": "Niki",
-              "url": "https://tonsky.me/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
-              "title": "Backprop",
-              "url": "https://www.trybackprop.com/",
-              "status": "NoGFW",
-              "image": "",
-              "svg": ""
-            },
-            {
               "title": "Two-Bit History",
               "url": "https://twobithistory.org/",
               "status": "NoGFW",
@@ -5578,6 +5473,111 @@ window.SITE_DATA = {
             {
               "title": "xkcd",
               "url": "https://xkcd.com/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            }
+          ],
+          "icon": "<svg version=\"1.0\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100.000000 100.000000\" preserveAspectRatio=\"xMidYMid meet\"> <g transform=\"translate(0.000000,100.000000) scale(0.100000,-0.100000)\" fill=\"currentColor\" stroke=\"none\"> <path d=\"M57 862 c-14 -15 -17 -40 -17 -120 l0 -102 460 0 460 0 0 103 c0 88 -3 106 -18 120 -17 15 -62 17 -444 17 -399 0 -426 -1 -441 -18z m133 -77 c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0 23 -7 30 -15z m120 0 c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0 23 -7 30 -15z m550 -25 l0 -40 -240 0 -240 0 0 40 0 40 240 0 240 0 0 -40z\"/> <path d=\"M42 363 l3 -238 231 -3 232 -2 -14 37 c-60 170 81 363 266 363 53 0 125 -24 165 -55 l35 -26 0 80 0 81 -460 0 -460 0 2 -237z\"/> <path d=\"M680 467 c-49 -16 -133 -102 -148 -153 -28 -94 -8 -169 63 -239 70 -71 145 -91 239 -63 55 16 138 99 154 154 26 89 9 163 -55 234 -65 72 -158 97 -253 67z m98 -40 c6 -6 13 -24 17 -40 7 -26 6 -27 -34 -27 -46 0 -54 17 -25 58 17 25 27 27 42 9z m-88 -11 c0 -3 -4 -16 -10 -30 -8 -22 -16 -26 -47 -26 l-38 1 35 29 c30 26 60 39 60 26z m200 -26 l35 -29 -38 -1 c-31 0 -39 4 -47 26 -13 32 -13 34 3 34 7 0 28 -13 47 -30z m-230 -100 c0 -29 -1 -30 -51 -30 -43 0 -50 3 -45 16 3 9 6 22 6 30 0 10 13 14 45 14 43 0 45 -1 45 -30z m158 -2 c3 -28 3 -28 -57 -28 -57 0 -61 1 -61 23 0 34 8 38 65 35 46 -3 50 -5 53 -30z m132 18 c0 -8 3 -21 6 -30 5 -13 -2 -16 -45 -16 -50 0 -51 1 -51 30 0 29 2 30 45 30 32 0 45 -4 45 -14z m-290 -116 c0 -29 -2 -30 -45 -30 -32 0 -45 4 -45 14 0 8 -3 21 -6 30 -5 13 2 16 45 16 50 0 51 -1 51 -30z m158 3 c-3 -27 -5 -28 -58 -28 -53 0 -55 1 -58 28 -3 27 -3 27 58 27 61 0 61 0 58 -27z m138 11 c-3 -9 -6 -22 -6 -30 0 -10 -13 -14 -45 -14 -43 0 -45 1 -45 30 0 29 1 30 51 30 43 0 50 -3 45 -16z m-276 -110 c13 -32 13 -34 -3 -34 -7 0 -28 13 -47 30 l-35 29 38 1 c31 0 39 -4 47 -26z m115 -1 c-3 -16 -13 -35 -21 -43 -12 -13 -16 -13 -28 0 -8 8 -18 27 -21 43 -7 26 -6 27 35 27 41 0 42 -1 35 -27z m95 -3 c-19 -17 -40 -30 -47 -30 -16 0 -16 2 -3 34 8 22 16 26 47 26 l38 -1 -35 -29z\"/> </g> </svg>"
+        },
+        {
+          "id": "personal",
+          "title": "个人",
+          "items": [
+            {
+              "title": "andreinc",
+              "url": "https://www.andreinc.net/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "Become Sovran",
+              "url": "https://becomesovran.com/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "Charlie Clark",
+              "url": "https://www.builtby.cc/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "晨旭的博客",
+              "url": "https://www.chenxublog.com/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "CXPLAY World",
+              "url": "https://blog.cxplay.org/",
+              "status": "Worldwide",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "蛮荆",
+              "url": "https://dbwu.tech/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "Adam Dunkels",
+              "url": "https://dunkels.com/adam/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "Jimmy知识星球",
+              "url": "http://www.jimmyxuexue.top/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "Long Luo's Life Notes",
+              "url": "https://www.longluo.me/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "生信技术",
+              "url": "https://lxz9.com/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "毛若昕 | 静水流深",
+              "url": "https://maorx.cn/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "Lance's Blog",
+              "url": "https://rlancemartin.github.io/",
+              "status": "Worldwide",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "Niki",
+              "url": "https://tonsky.me/",
+              "status": "NoGFW",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "Backprop",
+              "url": "https://www.trybackprop.com/",
               "status": "NoGFW",
               "image": "",
               "svg": ""
