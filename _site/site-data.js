@@ -781,77 +781,21 @@ window.SITE_DATA = {
           "icon": "<svg viewBox=\"0 0 512 512\" fill=\"currentColor\"> <path d=\"M497 151H316c-8.401 0-15 6.599-15 15v300c0 8.401 6.599 15 15 15h181c8.401 0 15-6.599 15-15V166c0-8.401-6.599-15-15-15zm-76 270h-30c-8.401 0-15-6.599-15-15s6.599-15 15-15h30c8.401 0 15 6.599 15 15s-6.599 15-15 15zm0-180h-30c-8.401 0-15-6.599-15-15s6.599-15 15-15h30c8.401 0 15 6.599 15 15s-6.599 15-15 15z\" /> <path d=\"M15 331h196v60h-75c-8.291 0-15 6.709-15 15s6.709 15 15 15h135v-30h-30v-60h30V166c0-24.814 20.186-45 45-45h135V46c0-8.284-6.716-15-15-15H15C6.716 31 0 37.716 0 46v270c0 8.284 6.716 15 15 15z\" /> </svg>"
         },
         {
-          "id": "ai_aggregators",
-          "title": "AI聚合",
+          "id": "llm",
+          "title": "LLM",
           "items": [
             {
-              "title": "一起用AI",
-              "url": "https://17yongai.com/",
+              "title": "How LLMs Actually Work",
+              "url": "https://ynarwal.github.io/how-llms-work/index.html",
               "status": "NoGFW",
-              "image": "assets/sites/img/it/ai_aggregators/x-1.png",
+              "image": "",
               "svg": ""
             },
             {
-              "title": "AI工具集导航",
-              "url": "https://ai-bot.cn/",
+              "title": "Claude Code Unpacked",
+              "url": "https://ccunpacked.dev/",
               "status": "NoGFW",
-              "image": "assets/sites/img/it/ai_aggregators/x-3.png",
-              "svg": ""
-            },
-            {
-              "title": "AskAITools",
-              "url": "https://askaitools.ai/",
-              "status": "NoGFW",
-              "image": "assets/sites/img/it/ai_aggregators/askaitools.png",
-              "svg": ""
-            },
-            {
-              "title": "Futurepedia",
-              "url": "https://www.futurepedia.io/",
-              "status": "NoGFW",
-              "image": "assets/sites/img/it/ai_aggregators/x-5.png",
-              "svg": ""
-            },
-            {
-              "title": "Future Tools",
-              "url": "https://www.futuretools.io/",
-              "status": "Worldwide",
-              "image": "assets/sites/img/it/ai_aggregators/x-6.png",
-              "svg": ""
-            },
-            {
-              "title": "GPT-3 Demo",
-              "url": "https://gpt3demo.com/",
-              "status": "Worldwide",
-              "image": "assets/sites/img/it/ai_aggregators/x-7.png",
-              "svg": ""
-            },
-            {
-              "title": "GPTGames",
-              "url": "https://www.gptgames.dev/",
-              "status": "NoGFW",
-              "image": "assets/sites/img/it/ai_aggregators/gptgames.png",
-              "svg": ""
-            },
-            {
-              "title": "PromptHero",
-              "url": "https://prompthero.com/",
-              "status": "Worldwide",
-              "image": "assets/sites/img/it/ai_aggregators/x-8.png",
-              "svg": ""
-            },
-            {
-              "title": "There's an AI For That",
-              "url": "https://theresanaiforthat.com/",
-              "status": "NoGFW",
-              "image": "assets/sites/img/it/ai_aggregators/x-9.png",
-              "svg": ""
-            },
-            {
-              "title": "TopAI.tools",
-              "url": "https://topai.tools/",
-              "status": "Worldwide",
-              "image": "assets/sites/img/it/ai_aggregators/x-10.png",
+              "image": "",
               "svg": ""
             }
           ],
@@ -5390,6 +5334,13 @@ window.SITE_DATA = {
               "title": "Maps Mania",
               "url": "https://googlemapsmania.blogspot.com/",
               "status": "Worldwide",
+              "image": "",
+              "svg": ""
+            },
+            {
+              "title": "John.fun",
+              "url": "https://john.fun/",
+              "status": "NoGFW",
               "image": "",
               "svg": ""
             },
