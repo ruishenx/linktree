@@ -2845,6 +2845,13 @@ window.SITE_DATA = {
           "title": "健康",
           "items": [
             {
+              "title": "NIH",
+              "url": "https://www.nih.gov/",
+              "status": "NoGFW",
+              "image": "assets/sites/img/life/health/nih.png",
+              "svg": ""
+            },
+            {
               "title": "CDC",
               "url": "https://www.cdc.gov/",
               "status": "NoGFW",
