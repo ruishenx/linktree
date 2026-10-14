@@ -1,0 +1,636 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.1.3"><title>Practical Information Theory: From Shannon Communication to Human Decisions — Examen Rationis</title><meta name="description" content="An evidence-bounded introduction that maps sources, encoding, noise, decoding, decisions, and feedback into a trainable human information system."><link rel="canonical" href="https://ruishenx.github.io/linktree/er/p/00-hpmc/"><link rel="icon" href="../../generated/home/6428013c580f1d25.svg"><meta property="og:type" content="article"><meta property="og:site_name" content="认识论与信息论"><meta property="og:title" content="Practical Information Theory: From Shannon Communication to Human Decisions — Examen Rationis"><meta property="og:description" content="An evidence-bounded introduction that maps sources, encoding, noise, decoding, decisions, and feedback into a trainable human information system."><meta property="og:url" content="https://ruishenx.github.io/linktree/er/p/00-hpmc/"><meta property="og:image" content="https://ruishenx.github.io/linktree/er/generated/pages/information/post/00-hpmc/ae9d35c2b9dfd114.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Practical Information Theory: From Shannon Communication to Human Decisions — Examen Rationis"><meta name="twitter:description" content="An evidence-bounded introduction that maps sources, encoding, noise, decoding, decisions, and feedback into a trainable human information system."><meta name="twitter:image" content="https://ruishenx.github.io/linktree/er/generated/pages/information/post/00-hpmc/ae9d35c2b9dfd114.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"信息论实践简介","description":"An evidence-bounded introduction that maps sources, encoding, noise, decoding, decisions, and feedback into a trainable human information system.","author":[{"@type":"Person","name":"Ruishen","url":"https://ruishenx.github.io/linktree/er/about/"}],"datePublished":"2026-07-29","dateModified":"2026-07-29","image":"https://ruishenx.github.io/linktree/er/generated/pages/information/post/00-hpmc/ae9d35c2b9dfd114.png","keywords":["information theory","Shannon model","information literacy","decision making","systems thinking"],"publisher":{"@type":"Organization","name":"认识论与信息论","logo":{"@type":"ImageObject","url":"https://ruishenx.github.io/linktree/er/generated/home/6428013c580f1d25.svg"}},"mainEntityOfPage":"https://ruishenx.github.io/linktree/er/p/00-hpmc/"}</script><link rel="stylesheet" href="../../_astro/BaseLayout.C87HAFC_.css"></head><body id="page-top"><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="site-header__inner"><a class="brand" href="../../" aria-label="认识论与信息论 home"><img src="../../generated/home/6428013c580f1d25.svg" alt="" width="32" height="32"><span>认识论与信息论</span></a><nav class="site-nav" aria-label="Primary navigation"><ul><li><a href="../../">Home</a></li><li><a href="../../epistemology/">Epistemology</a></li><li><a href="../../information/">Information Theory</a></li><li><a href="../../about/">About</a></li></ul></nav></div></header><main id="main-content"><article class="post"><header class="post-header"><a class="post-header__identity" href="../../">认识论与信息论</a><h1>信息论实践简介</h1><p class="post-header__subtitle">用于培养和训练信息能力</p><p class="post-header__dek">信息论的工程应用，在人类决策行为上具有指导意义。</p><div class="post-header__meta"><span>By Ruishen</span><span aria-hidden="true">•</span><time datetime="2026-07-29">2026年7月29日</time><span aria-hidden="true">•</span><span>8 min read</span></div><ul class="tag-list" aria-label="Article topics"><li>information theory</li><li>Shannon model</li><li>information literacy</li><li>decision making</li><li>systems thinking</li></ul></header><figure class="post-cover"><img src="../../generated/pages/information/post/00-hpmc/ae9d35c2b9dfd114.png" alt="Schematic diagram of a general communication system." width="1200" height="720"><figcaption>Schematic diagram of a general communication system.<span> — A Mathematical Theory of Communication</span></figcaption></figure><div class="post-body"><div class="article-prose"><h2 id="人类朴素情感与约束的最小正交集六维模型" class="article-prose__heading">人类朴素情感与约束的最小正交集：六维模型</h2>
+<p class="article-prose__paragraph"><strong>系列总览 | Human Primitive Motives and Constraints</strong></p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph"><strong>目标</strong>：不是列举所有情绪、欲望或社会动机，而是寻找一个足够小、彼此尽量不可约、又能组合解释大多数人类朴素诉求的“基向量集合”。</p>
+<p class="article-prose__paragraph"><strong>结论</strong>：维数仍以 6 维最合适，最终建议：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>H</mi><mo>=</mo><mo stretchy="false">(</mo><mi>B</mi><mo separator="true">,</mo><mi>A</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>E</mi><mo separator="true">,</mo><mi>R</mi><mo separator="true">,</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{
+H=(B,A,C,E,R,V)
+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.68em;vertical-align:-0.59em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.09em;"><span style="top:-3.68em;"><span class="pstrut" style="height:3.68em;"></span><span class="boxpad"><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="mclose">)</span></span></span></span></span><span style="top:-3.09em;"><span class="pstrut" style="height:3.68em;"></span><span class="stretchy fbox" style="height:1.68em;border-style:solid;border-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.59em;"><span></span></span></span></span></span></span></span></span></span>
+<ul class="article-prose__list">
+<li><strong>B — Body / Biological Drive：身体与生物驱力</strong></li>
+<li><strong>A — Autonomy：自主与免受支配</strong></li>
+<li><strong>C — Capability / Effectance：能力与效能</strong></li>
+<li><strong>E — Epistemic Clarity：认知与可知性</strong></li>
+<li><strong>R — Relatedness：关系与联结</strong></li>
+<li><strong>V — Value / Mattering：价值、重要性与意义</strong></li>
+</ul>
+<p class="article-prose__paragraph">最朴素的六句话：</p>
+<ol class="article-prose__list">
+<li><strong>“我想让身体处在可接受的状态。”</strong></li>
+<li><strong>“我想自己决定。”</strong></li>
+<li><strong>“我想做得到。”</strong></li>
+<li><strong>“我想知道、看懂并预测。”</strong></li>
+<li><strong>“我想与别人互相联结、在乎。”</strong></li>
+<li><strong>“我想知道什么值得做，也希望我的存在与行动是重要的。”</strong></li>
+</ol>
+</blockquote>
+<h3 id="摘要" class="article-prose__heading">摘要</h3>
+<p class="article-prose__paragraph">本文讨论的是一个用于解释人类朴素诉求的概念生成基，而非心理学已验证的六需求定律。保留六维，但统一其抽象层级：B 为身体状态约束，A 为选择主权，C 为干预效能，E 为认知可知性，R 为关系联结，V 为价值与重要性。核心方法是以覆盖性、不可约性、同层级、生成性和可工程化为判据，随后以反事实和技术案例进行检验。</p>
+<p class="article-prose__paragraph"><strong>命题性质</strong>：六维的系统对应是建模定义；技术影响和因果机制是可供检验的推断；“恰好六维且最小”尚不是经过经验或数学证明的结论。</p>
+<h3 id="阅读结构" class="article-prose__heading">阅读结构</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-prose__table-wrap" role="region" aria-label="Scrollable table" tabindex="0"><table><thead><tr><th>文件</th><th>研究对象</th><th>基本问题</th></tr></thead><tbody><tr><td><a href="../01-b/">01 B：身体与生物驱力</a></td><td>Body / Biological Drive</td><td>身体能否承受？</td></tr><tr><td><a href="../02-a/">02 A：自主与免受支配</a></td><td>Autonomy</td><td>是否由我决定？</td></tr><tr><td><a href="../03-c/">03 C：能力与效能</a></td><td>Capability / Effectance</td><td>能否做到？</td></tr><tr><td><a href="../04-e/">04 E：认知与可知性</a></td><td>Epistemic Clarity</td><td>是否知道？</td></tr><tr><td><a href="../05-r/">05 R：关系与联结</a></td><td>Relatedness</td><td>是否真实联结？</td></tr><tr><td><a href="../06-v/">06 V：价值与意义</a></td><td>Value / Mattering</td><td>是否值得？</td></tr></tbody></table></div>
+<h3 id="1-研究对象与概念正交" class="article-prose__heading">1. 研究对象与概念正交</h3>
+<p class="article-prose__paragraph">这里研究的不是：</p>
+<ul class="article-prose__list">
+<li>“人类一共有多少种情绪”；</li>
+<li>“心理学已经证明有六种基本需要”；</li>
+<li>“大脑中是否存在六套独立神经回路”。</li>
+</ul>
+<p class="article-prose__paragraph">这里要解决的是一个<strong>工程化建模问题</strong>：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph">如果把人类各种“如果……就好了”“我不想……”“我希望……”式的朴素诉求视为高维现象，能否找到一个尽可能小的生成基，使大量具体欲望都可以表示为这些基向量的组合？</p>
+</blockquote>
+<p class="article-prose__paragraph">因此，“正交”是<strong>概念正交（conceptual orthogonality）</strong>，而不是统计学意义上的零相关。</p>
+<p class="article-prose__paragraph">六个维度在现实中当然会高度相关。例如贫穷可能同时损伤身体安全、自主、能力、关系和社会价值；但这不意味着它们在概念上是同一个变量。</p>
+<h4 id="11-最小正交集的五项判据" class="article-prose__heading">1.1 最小正交集的五项判据</h4>
+<p class="article-prose__paragraph">一个候选维度只有同时尽量满足以下条件，才应保留。</p>
+<p class="article-prose__paragraph"><strong>判据 A：不可约性</strong></p>
+<p class="article-prose__paragraph">不能稳定地由其他维度推导出来。</p>
+<p class="article-prose__paragraph">如果一个人其他维度全部满足，而该维度仍然可能严重缺失，则说明它有独立性。</p>
+<p class="article-prose__paragraph"><strong>判据 B：覆盖性</strong></p>
+<p class="article-prose__paragraph">删除它以后，会出现一大类常见人类诉求无法自然表达。</p>
+<p class="article-prose__paragraph"><strong>判据 C：同层级</strong></p>
+<p class="article-prose__paragraph">不能一会儿列“生存”，一会儿列“金钱”，一会儿列“爱情”，因为三者抽象层级不同。</p>
+<p class="article-prose__paragraph">“金钱”是工具，“爱情”是具体关系形态，“生存”是结果。</p>
+<p class="article-prose__paragraph"><strong>判据 D：生成性</strong></p>
+<p class="article-prose__paragraph">应当能够组合解释大量上层概念，例如：</p>
+<ul class="article-prose__list">
+<li>安全；</li>
+<li>自由；</li>
+<li>成就；</li>
+<li>好奇；</li>
+<li>爱；</li>
+<li>地位；</li>
+<li>公平；</li>
+<li>金钱；</li>
+<li>意义；</li>
+<li>身份；</li>
+<li>宗教；</li>
+<li>娱乐。</li>
+</ul>
+<p class="article-prose__paragraph"><strong>判据 E：可工程化</strong></p>
+<p class="article-prose__paragraph">最好能映射到一个一般性的 agent / control-system 模型，而不仅是自然语言分类。</p>
+<h3 id="2-最终六维模型" class="article-prose__heading">2. 最终六维模型</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-prose__table-wrap" role="region" aria-label="Scrollable table" tabindex="0"><table><thead><tr><th>维度</th><th>英文</th><th>最朴素的问题</th><th>主要约束来源</th><th>典型缺失感</th></tr></thead><tbody><tr><td><strong>B</strong></td><td>Body / Biological Drive</td><td>我的身体是否处于可接受状态？</td><td>生理系统、身体、疾病、自然环境</td><td>饿、渴、痛、疲劳、性驱力、恐惧</td></tr><tr><td><strong>A</strong></td><td>Autonomy</td><td>我能否自己决定？</td><td>其他行动者、组织、制度的 veto / coercion</td><td>被控制、被强迫、被禁止</td></tr><tr><td><strong>C</strong></td><td>Capability / Effectance</td><td>我能否让想要的结果发生？</td><td>技能、资源、工具、时间、因果控制力</td><td>无力、不会、没资源、做不到</td></tr><tr><td><strong>E</strong></td><td>Epistemic Clarity</td><td>我知道真实状态、原因和未来吗？</td><td>信息缺失、噪声、复杂性、不确定性</td><td>困惑、未知、不可预测</td></tr><tr><td><strong>R</strong></td><td>Relatedness</td><td>我和别人是否存在真实而稳定的联结？</td><td>社会网络中的边缺失或不可靠</td><td>孤独、排斥、无人理解、失去依恋</td></tr><tr><td><strong>V</strong></td><td>Value / Mattering</td><td>什么值得做？我和我的行动是否重要？</td><td>价值函数、社会/自我评价、长期方向缺失</td><td>空虚、无意义、无价值、无方向</td></tr></tbody></table></div>
+<p class="article-prose__paragraph">可以压缩为：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mtext>身体可承受、选择属于我、事情做得到、世界看得懂、人与人连得上、行动值得做</mtext></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{
+\text{身体可承受、选择属于我、事情做得到、世界看得懂、人与人连得上、行动值得做}
+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3633em;vertical-align:-0.34em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0233em;"><span style="top:-3.3633em;"><span class="pstrut" style="height:3.3633em;"></span><span class="boxpad"><span class="mord"><span class="mord"><span class="mord text"><span class="mord cjk_fallback">身体可承受、选择属于我、事情做得到、世界看得懂、人与人连得上、行动值得做</span></span></span></span></span></span><span style="top:-3.0233em;"><span class="pstrut" style="height:3.3633em;"></span><span class="stretchy fbox" style="height:1.3633em;border-style:solid;border-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.34em;"><span></span></span></span></span></span></span></span></span></span>
+<h3 id="3-系统论框架" class="article-prose__heading">3. 系统论框架</h3>
+<p class="article-prose__paragraph">如果把人视为一个：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph"><strong>嵌入身体、部分可观测、处于多行动者环境中的目标导向控制系统</strong></p>
+</blockquote>
+<p class="article-prose__paragraph">那么六维几乎可以自然对应到六种不同的约束。</p>
+<pre class="mermaid article-prose__mermaid" tabindex="0" aria-label="Mermaid diagram">flowchart LR
+    B[B 身体约束] --> P[行动者]
+    A[A 选择主权] --> P
+    E[E 观测与模型] --> P
+    V[V 价值目标] --> P
+    P --> C[C 行动效能]
+    C --> W[外部世界]
+    W --> E
+    P --- R[R 关系网络]</pre>
+<p class="article-prose__paragraph">图示为分析结构，不表示六维之间的统计独立或单向因果。B/A/E/V 分别提供不同性质的约束，C 对应干预链路，R 对应多人关系。每个分维的操作定义、反事实见证与约束边界见对应专题。</p>
+<h3 id="4-反事实不可约性方法" class="article-prose__heading">4. 反事实不可约性：方法</h3>
+<p class="article-prose__paragraph">严格数学意义上的“独立证明”在这里并不存在，但可以使用**反事实见证（counterexample witness）**进行概念检验：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph">能否构造“其他五维都很高，但该维很低”的人类状态？</p>
+</blockquote>
+<p class="article-prose__paragraph">如果可以，则该维不能轻易删除。</p>
+<p class="article-prose__paragraph">逐维反事实检验及完整例子保存在 01—06 篇专题。反事实可以排除部分概念合并方案，但并不构成统计独立性或神经模块性的实验证明。</p>
+<h3 id="5-为什么不能轻易压缩为五维" class="article-prose__heading">5. 为什么不能轻易压缩为五维</h3>
+<p class="article-prose__paragraph">最有诱惑力的压缩有四种。</p>
+<h4 id="51-把-e-合并进-c失败" class="article-prose__heading">5.1 把 E 合并进 C：失败</h4>
+<p class="article-prose__paragraph">理由：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph">“知道”可以提高“做到”，但人存在不以外部任务成功为目标的信息寻求。</p>
+</blockquote>
+<p class="article-prose__paragraph">因此 E 是独立的 epistemic reward / uncertainty-reduction channel。<sup><a href="#user-content-fn-curiosity-circuits" id="user-content-fnref-curiosity-circuits" data-footnote-ref="" aria-describedby="user-content-footnote-label">1</a></sup><sup><a href="#user-content-fn-curiosity-sampling" id="user-content-fnref-curiosity-sampling" data-footnote-ref="" aria-describedby="user-content-footnote-label">2</a></sup></p>
+<h4 id="52-把-a-合并进-c失败" class="article-prose__heading">5.2 把 A 合并进 C：失败</h4>
+<p class="article-prose__paragraph">理由：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph">自主解决“谁决定”，效能解决“能不能实现”。</p>
+</blockquote>
+<p class="article-prose__paragraph">一个是 authority / veto 问题，一个是 actuation / reachability 问题。</p>
+<h4 id="53-把-r-与-v-合并为社会需要失败" class="article-prose__heading">5.3 把 R 与 V 合并为“社会需要”：失败</h4>
+<p class="article-prose__paragraph">因为：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>being loved</mtext><mo mathvariant="normal">≠</mo><mtext>being respected</mtext></mrow><annotation encoding="application/x-tex">\text{being loved} \neq \text{being respected}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">being loved</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mspace nobreak"></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">being respected</span></span></span></span></span></span>
+<p class="article-prose__paragraph">更进一步：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>mattering</mtext></mrow><annotation encoding="application/x-tex">\text{mattering}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8623em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">mattering</span></span></span></span></span></span>
+<p class="article-prose__paragraph">甚至可以存在于完全不依赖社会排名的宗教、艺术、科研和私人价值系统中。</p>
+<h4 id="54-把-b-视为-c-的身体资源失败" class="article-prose__heading">5.4 把 B 视为 C 的“身体资源”：失败</h4>
+<p class="article-prose__paragraph">饥饿、疼痛、性、睡眠等驱力不只是“执行能力下降”。</p>
+<p class="article-prose__paragraph">它们本身能够直接重排 reward priority。</p>
+<p class="article-prose__paragraph">因此身体不能只被当成一种工具资源。</p>
+<h3 id="6-为什么暂不增设第七维" class="article-prose__heading">6. 为什么暂不增设第七维</h3>
+<p class="article-prose__paragraph">若继续增加，最常见候选包括：</p>
+<ol class="article-prose__list">
+<li>pleasure / happiness；</li>
+<li>novelty / exploration；</li>
+<li>reproduction；</li>
+<li>fairness / morality；</li>
+<li>identity；</li>
+<li>meaning / transcendence；</li>
+<li>security；</li>
+<li>care。</li>
+</ol>
+<p class="article-prose__paragraph">重新审查后，暂时都不需要升为第七基向量。</p>
+<p class="article-prose__paragraph">候选维度的完整归约检验分置于六篇专题：快乐/痛苦、意义见 V；新奇与身份见 E；性与繁衍、安全见 B；公平/道德见 A；照护见 R。相关归属是本模型提出的工作性分解，并非唯一可能分类。</p>
+<h3 id="7-常见诉求的六维生成表" class="article-prose__heading">7. 常见诉求的六维生成表</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-prose__table-wrap" role="region" aria-label="Scrollable table" tabindex="0"><table><thead><tr><th>常见诉求</th><th>六维展开</th></tr></thead><tbody><tr><td>活下去</td><td>B</td></tr><tr><td>不疼、不饿、睡好</td><td>B</td></tr><tr><td>自由</td><td>A</td></tr><tr><td>隐私</td><td>A + E（控制别人对我的可观测性）</td></tr><tr><td>财产权</td><td>A + C</td></tr><tr><td>学会一项技能</td><td>C</td></tr><tr><td>有钱</td><td>C + A + B + V 的通用工具</td></tr><tr><td>好奇</td><td>E</td></tr><tr><td>科学探索</td><td>E + V + C</td></tr><tr><td>安全感</td><td>B + A + C + E</td></tr><tr><td>爱情</td><td>R + B + V</td></tr><tr><td>友谊</td><td>R</td></tr><tr><td>家庭</td><td>R + B + V</td></tr><tr><td>性</td><td>B + R</td></tr><tr><td>社会地位</td><td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>social</mtext></msub></mrow><annotation encoding="application/x-tex">V_{\text{social}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">social</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> + C</td></tr><tr><td>权力</td><td>A + C + <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>social</mtext></msub></mrow><annotation encoding="application/x-tex">V_{\text{social}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">social</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></td></tr><tr><td>成就</td><td>C + V</td></tr><tr><td>被尊重</td><td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>social</mtext></msub></mrow><annotation encoding="application/x-tex">V_{\text{social}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">social</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></td></tr><tr><td>公平</td><td>A + R + V + 资源分配规则</td></tr><tr><td>身份</td><td>E(self) + R + V</td></tr><tr><td>人生意义</td><td>E + V</td></tr><tr><td>宗教</td><td>V + E + R</td></tr><tr><td>艺术</td><td>V + E + B（审美体验）</td></tr><tr><td>娱乐</td><td>B + E + C + R + V 的不同组合</td></tr><tr><td>冒险</td><td>B（刺激）+ E（探索）+ C（挑战）+ V</td></tr><tr><td>养育子女</td><td>R + B + V + C</td></tr><tr><td>名垂青史</td><td>V 跨时间延伸</td></tr><tr><td>“如果我是大师就好了”</td><td>C + E</td></tr><tr><td>“如果我的钱没人能管就好了”</td><td>A + C</td></tr></tbody></table></div>
+<h3 id="8-技术革新分析与待验证假设" class="article-prose__heading">8. 技术革新分析与待验证假设</h3>
+<p class="article-prose__paragraph">这套六维模型尤其适合分析：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph"><strong>为什么某种技术会触发大规模采用，而另一些技术即使先进却长期局限于专业领域？</strong></p>
+</blockquote>
+<p class="article-prose__paragraph">可以先完全不看技术名字，而问：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph">它降低了哪一种人类基础约束？</p>
+</blockquote>
+<h4 id="81-技术映射示例" class="article-prose__heading">8.1 技术映射示例</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-prose__table-wrap" role="region" aria-label="Scrollable table" tabindex="0"><table><thead><tr><th>技术</th><th>主要作用维度</th><th>最朴素的情感</th></tr></thead><tbody><tr><td>农业</td><td>B + C</td><td>“如果不用担心没饭吃就好了。”</td></tr><tr><td>医药</td><td>B + E + C</td><td>“如果知道哪里病了、还能治好就好了。”</td></tr><tr><td>汽车</td><td>C</td><td>“如果我能更快去很远的地方就好了。”</td></tr><tr><td>Internet</td><td>E + R + C</td><td>“如果我能立即知道、联系、传输就好了。”</td></tr><tr><td>搜索引擎</td><td>E</td><td>“如果我马上能找到答案就好了。”</td></tr><tr><td>Smartphone</td><td>C + E + R</td><td>“如果这些能力都随身带着就好了。”</td></tr><tr><td>Social Media</td><td>R + <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>social</mtext></msub></mrow><annotation encoding="application/x-tex">V_{\text{social}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">social</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></td><td>“如果我能被连接、被看见就好了。”</td></tr><tr><td>Bitcoin / Crypto</td><td>A + C</td><td>“如果别人不能随意阻止我处分自己的资产就好了。”</td></tr><tr><td>AI</td><td>C + E</td><td>“如果我也能像专家一样做、像专家一样理解就好了。”</td></tr><tr><td>宗教制度</td><td>V + R + E</td><td>“如果世界有解释、人生有意义、我有所归属就好了。”</td></tr><tr><td>民主制度</td><td>A + <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>social</mtext></msub></mrow><annotation encoding="application/x-tex">V_{\text{social}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">social</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></td><td>“如果我的意志也算数就好了。”</td></tr><tr><td>保险</td><td>B + C + E</td><td>“如果坏事发生时不至于毁掉一切就好了。”</td></tr></tbody></table></div>
+<h4 id="82-general-purpose-technology-的一个假设" class="article-prose__heading">8.2 General-Purpose Technology 的一个假设</h4>
+<p class="article-prose__paragraph">可以提出一个待验证假设：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph"><strong>一种技术越能同时、低成本、大规模地降低多个基础维度的约束，其成为 general-purpose technology 的概率越高。</strong></p>
+</blockquote>
+<p class="article-prose__paragraph">例如：</p>
+<p class="article-prose__paragraph"><strong>AI</strong></p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>I</mi><mo>→</mo><mi>C</mi><mo>↑</mo><mo>+</mo><mi>E</mi><mo>↑</mo></mrow><annotation encoding="application/x-tex">AI\rightarrow C\uparrow+E\uparrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.0785em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↑</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↑</span></span></span></span></span>
+<p class="article-prose__paragraph">进一步通过 agent 和机器人可能影响：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mtext> </mtext><mi>B</mi><mo separator="true">,</mo><mtext> </mtext><mi>R</mi><mo separator="true">,</mo><mtext> </mtext><mi>V</mi></mrow><annotation encoding="application/x-tex">A,\ B,\ R,\ V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mpunct">,</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mpunct">,</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span></span></span></span></span>
+<p class="article-prose__paragraph"><strong>Internet</strong></p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>I</mi><mi>n</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>n</mi><mi>e</mi><mi>t</mi><mo>→</mo><mi>E</mi><mo>↑</mo><mo>+</mo><mi>R</mi><mo>↑</mo><mo>+</mo><mi>C</mi><mo>↑</mo></mrow><annotation encoding="application/x-tex">Internet\rightarrow E\uparrow+R\uparrow+C\uparrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0785em;">I</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.0278em;">er</span><span class="mord mathnormal">n</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↑</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↑</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↑</span></span></span></span></span>
+<p class="article-prose__paragraph"><strong>Smartphone</strong></p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mi>m</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>p</mi><mi>h</mi><mi>o</mi><mi>n</mi><mi>e</mi><mo>→</mo><mi>C</mi><mo>↑</mo><mo>+</mo><mi>E</mi><mo>↑</mo><mo>+</mo><mi>R</mi><mo>↑</mo></mrow><annotation encoding="application/x-tex">Smartphone\rightarrow C\uparrow+E\uparrow+R\uparrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal">ma</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal">tp</span><span class="mord mathnormal">h</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↑</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↑</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↑</span></span></span></span></span>
+<p class="article-prose__paragraph">因此，它们的社会影响通常大于只解决一个狭窄工业参数的技术。</p>
+<p class="article-prose__paragraph">这只是分析假说，并非已有文献证明的定律。</p>
+<h4 id="83-从技术属性到人类约束" class="article-prose__heading">8.3 从技术属性到人类约束</h4>
+<p class="article-prose__paragraph">评价一项技术，应先指定作用对象、使用场景和权利边界，再判断它对六维的净效应；不能由“中心化 / 去中心化”“先进 / 落后”等技术标签直接推出社会结果。以区块链和 AI 为例，两者分别可能主要改变 A/C 与 C/E，但最终体验还取决于账户入口、基础设施、制度许可、实际可靠性和分配机制。</p>
+<p class="article-prose__paragraph">因果分析建议按以下顺序展开：识别原始约束 → 确认技术直接改变哪项可达边界 → 追踪现实基础设施与 chokepoint → 判断普通人实际获得的净变化。此顺序是研究程序，不是任何技术必然普及的判据。</p>
+<pre class="mermaid article-prose__mermaid" tabindex="0" aria-label="Mermaid diagram">flowchart LR
+    N[朴素诉求] --> K[约束类型]
+    K --> T[技术或制度]
+    T --> D[实际可达边界]
+    D --> F[反馈与再评价]</pre>
+<h3 id="9-假设边界与不确定性" class="article-prose__heading">9. 假设、边界与不确定性</h3>
+<h4 id="91-这不是心理学已经证明的六大基本需求" class="article-prose__heading">9.1 这不是“心理学已经证明的六大基本需求”</h4>
+<p class="article-prose__paragraph">Self-Determination Theory 最经典的是：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>u</mi><mi>t</mi><mi>o</mi><mi>n</mi><mi>o</mi><mi>m</mi><mi>y</mi><mo>+</mo><mi>C</mi><mi>o</mi><mi>m</mi><mi>p</mi><mi>e</mi><mi>t</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi><mo>+</mo><mi>R</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi><mi>n</mi><mi>e</mi><mi>s</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Autonomy+Competence+Relatedness</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">u</span><span class="mord mathnormal">t</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mord mathnormal">o</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.0359em;">y</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mord mathnormal">o</span><span class="mord mathnormal">m</span><span class="mord mathnormal">p</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">ce</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span><span class="mord mathnormal">n</span><span class="mord mathnormal">ess</span></span></span></span></span>
+<p class="article-prose__paragraph">而 Fundamental Social Motives Framework、Maslow、ERG、Murray、DRAMMA 等采用不同的需要/动机集合。<sup><a href="#user-content-fn-sdt" id="user-content-fnref-sdt" data-footnote-ref="" aria-describedby="user-content-footnote-label">3</a></sup><sup><a href="#user-content-fn-sdt-work-review" id="user-content-fnref-sdt-work-review" data-footnote-ref="" aria-describedby="user-content-footnote-label">4</a></sup><sup><a href="#user-content-fn-social-motives" id="user-content-fnref-social-motives" data-footnote-ref="" aria-describedby="user-content-footnote-label">5</a></sup><sup><a href="#user-content-fn-needs-scales" id="user-content-fnref-needs-scales" data-footnote-ref="" aria-describedby="user-content-footnote-label">6</a></sup></p>
+<p class="article-prose__paragraph">2024 年对基本心理需要测量工具的系统综述也显示，研究中出现过：</p>
+<ul class="article-prose__list">
+<li>autonomy；</li>
+<li>competence；</li>
+<li>relatedness；</li>
+<li>physical needs；</li>
+<li>safety；</li>
+<li>self-esteem；</li>
+<li>novelty；</li>
+<li>meaning；</li>
+<li>dominance；</li>
+<li>learning；</li>
+<li>morality；</li>
+</ul>
+<p class="article-prose__paragraph">等大量不同候选。<sup><a href="#user-content-fn-needs-scales" id="user-content-fnref-needs-scales-2" data-footnote-ref="" aria-describedby="user-content-footnote-label">6</a></sup></p>
+<p class="article-prose__paragraph">不存在学界公认的“唯一六维正交基”。</p>
+<h4 id="92-六维是工程抽象而不是神经解剖分区" class="article-prose__heading">9.2 六维是工程抽象，而不是神经解剖分区</h4>
+<p class="article-prose__paragraph">一个真实行为往往同时激活多个神经回路与动机系统。</p>
+<p class="article-prose__paragraph">因此：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>B</mi><mo separator="true">,</mo><mi>A</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>E</mi><mo separator="true">,</mo><mi>R</mi><mo separator="true">,</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">B,A,C,E,R,V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span></span></span></span></span>
+<p class="article-prose__paragraph">不应被理解成“大脑六个模块”。</p>
+<h4 id="93-概念正交不等于统计独立" class="article-prose__heading">9.3 概念正交不等于统计独立</h4>
+<p class="article-prose__paragraph">现实中这些变量通常高度耦合。</p>
+<p class="article-prose__paragraph">例如贫穷可以同时降低：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>B</mi><mo separator="true">,</mo><mi>A</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>R</mi><mo separator="true">,</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">B,A,C,R,V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span></span></span></span></span>
+<p class="article-prose__paragraph">战争可以同时打击：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>B</mi><mo separator="true">,</mo><mi>A</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>E</mi><mo separator="true">,</mo><mi>R</mi><mo separator="true">,</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">B,A,C,E,R,V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span></span></span></span></span>
+<p class="article-prose__paragraph">因此实际数据中的相关系数完全可能很高。</p>
+<h4 id="94-最值得继续挑战的维度是-v" class="article-prose__heading">9.4 最值得继续挑战的维度是 V</h4>
+<p class="article-prose__paragraph">V 是六维中最抽象、最容易继续拆分的维度。</p>
+<p class="article-prose__paragraph">未来如果发现无法通过同一变量稳定解释：</p>
+<ul class="article-prose__list">
+<li>intrinsic value；</li>
+<li>purpose；</li>
+<li>self-worth；</li>
+<li>social status；</li>
+<li>existential significance；</li>
+</ul>
+<p class="article-prose__paragraph">则可能需要进一步拆成：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>=</mo><mtext>Value / Purpose</mtext></mrow><annotation encoding="application/x-tex">V_1=\text{Value / Purpose}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Value / Purpose</span></span></span></span></span></span>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>V</mi><mn>2</mn></msub><mo>=</mo><mtext>Social / Existential Mattering</mtext></mrow><annotation encoding="application/x-tex">V_2=\text{Social / Existential Mattering}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Social / Existential Mattering</span></span></span></span></span></span>
+<p class="article-prose__paragraph">此时模型将从 6D 变为 7D。</p>
+<p class="article-prose__paragraph">目前为了满足“最小集”原则，暂时不拆。</p>
+<h3 id="10-结论" class="article-prose__heading">10. 结论</h3>
+<p class="article-prose__paragraph">重新审查后，最合理的处理不是简单增加或删除维数，而是<strong>把六个维度校准到同一个系统抽象层级</strong>。</p>
+<p class="article-prose__paragraph">最终版本：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>H</mi><mo>=</mo><mo stretchy="false">(</mo><mi>B</mi><mo separator="true">,</mo><mi>A</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>E</mi><mo separator="true">,</mo><mi>R</mi><mo separator="true">,</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{
+H=(B,A,C,E,R,V)
+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.68em;vertical-align:-0.59em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.09em;"><span style="top:-3.68em;"><span class="pstrut" style="height:3.68em;"></span><span class="boxpad"><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="mclose">)</span></span></span></span></span><span style="top:-3.09em;"><span class="pstrut" style="height:3.68em;"></span><span class="stretchy fbox" style="height:1.68em;border-style:solid;border-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.59em;"><span></span></span></span></span></span></span></span></span></span>
+<p class="article-prose__paragraph">可以分别解释为：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-prose__table-wrap" role="region" aria-label="Scrollable table" tabindex="0"><table><thead><tr><th>代码</th><th>系统论含义</th><th>朴素语言</th></tr></thead><tbody><tr><td>B</td><td>internal state / viability</td><td><strong>身体能不能承受？</strong></td></tr><tr><td>A</td><td>policy sovereignty</td><td><strong>是不是我自己决定？</strong></td></tr><tr><td>C</td><td>actuation / controllability</td><td><strong>我做不做得到？</strong></td></tr><tr><td>E</td><td>observation / world model</td><td><strong>我知不知道发生了什么？</strong></td></tr><tr><td>R</td><td>relational edges</td><td><strong>我和别人有没有真实联结？</strong></td></tr><tr><td>V</td><td>objective / value function</td><td><strong>什么值得做、我是否重要？</strong></td></tr></tbody></table></div>
+<p class="article-prose__paragraph">这六维具有一个非常重要的结构优势：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph">它们不只是心理学名词，而能直接对应到一个“具身、部分可观测、多行动者、目标导向 agent”的基本结构。</p>
+</blockquote>
+<p class="article-prose__paragraph">从这个角度看：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mrow><mtext>朴素情感</mtext><mo>=</mo><mtext>agent 感知到某个基本约束后的主观信号</mtext></mrow></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{
+\text{朴素情感}
+=
+\text{agent 感知到某个基本约束后的主观信号}
+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.5578em;vertical-align:-0.5344em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0233em;"><span style="top:-3.5578em;"><span class="pstrut" style="height:3.5578em;"></span><span class="boxpad"><span class="mord"><span class="mord"><span class="mord text"><span class="mord cjk_fallback">朴素情感</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">agent </span><span class="mord cjk_fallback">感知到某个基本约束后的主观信号</span></span></span></span></span></span><span style="top:-3.0233em;"><span class="pstrut" style="height:3.5578em;"></span><span class="stretchy fbox" style="height:1.5578em;border-style:solid;border-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5344em;"><span></span></span></span></span></span></span></span></span></span>
+<p class="article-prose__paragraph">而技术、制度和文化的作用，则可以重新定义为：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mrow><mtext>改变 </mtext><mo stretchy="false">(</mo><mi>B</mi><mo separator="true">,</mo><mi>A</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>E</mi><mo separator="true">,</mo><mi>R</mi><mo separator="true">,</mo><mi>V</mi><mo stretchy="false">)</mo><mtext> 中一个或多个约束的可达边界</mtext></mrow></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{
+\text{改变 }(B,A,C,E,R,V)\text{ 中一个或多个约束的可达边界}
+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.68em;vertical-align:-0.59em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.09em;"><span style="top:-3.68em;"><span class="pstrut" style="height:3.68em;"></span><span class="boxpad"><span class="mord"><span class="mord"><span class="mord text"><span class="mord cjk_fallback">改变</span><span class="mord"> </span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="mclose">)</span><span class="mord text"><span class="mord"> </span><span class="mord cjk_fallback">中一个或多个约束的可达边界</span></span></span></span></span></span><span style="top:-3.09em;"><span class="pstrut" style="height:3.68em;"></span><span class="stretchy fbox" style="height:1.68em;border-style:solid;border-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.59em;"><span></span></span></span></span></span></span></span></span></span>
+<p class="article-prose__paragraph">因此，判断一种技术的深层社会意义时，可以不先问：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph">“它是中心化还是去中心化？”</p>
+</blockquote>
+<p class="article-prose__paragraph">而先问：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph"><strong>“它让普通人在 B/A/C/E/R/V 哪些方向上，从‘原来做不到’变成了‘现在可以’？”</strong></p>
+</blockquote>
+<h3 id="11-参考资料沿用原稿编号与链接" class="article-prose__heading">11. 参考资料（沿用原稿编号与链接）</h3>
+<p class="article-prose__paragraph">[1] Self-Determination Theory — Basic Psychological Needs.<br>
+<a href="https://selfdeterminationtheory.org/topics/application-basic-psychological-needs/" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[2] Van den Broeck, A. et al. <em>A Review of Self-Determination Theory’s Basic Psychological Needs at Work</em>.<br>
+<a href="https://selfdeterminationtheory.org/wp-content/uploads/2024/01/2016_VandenbroeckFerrisEtAl_a-review-of-self-determination-theory.pdf" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[3] Pick, C. M. et al. <em>Fundamental social motives measured across forty-two cultures in two waves</em>. Scientific Data (2022).<br>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9380674/" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[4] Monosov, I. E. <em>Curiosity: primate neural circuits for novelty and information seeking</em>. Nature Reviews Neuroscience (2024).<br>
+<a href="https://www.nature.com/articles/s41583-023-00784-9" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[5] <em>The Meaning in Life in Suicidal Patients: The Presence and the Search for Constructs. A Systematic Review</em>.<br>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6723920/" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[6] <em>The nature of status: Navigating the varied approaches to conceptualizing and measuring status</em>.<br>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11161331/" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[7] <em>Meaning in life is a fundamental protective factor in the context of psychopathology</em>.<br>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9453886/" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[8] <em>The Behavioral Neuroscience of Motivation: An Overview of Concepts, Measures, and Translational Applications</em>.<br>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4864984/" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[9] Gizowski, C. &#x26; Bourque, C. W. <em>The neural basis of homeostatic and anticipatory thirst</em>. Nature Reviews Nephrology.<br>
+<a href="https://www.nature.com/articles/nrneph.2017.149" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[10] Gottlieb, J. &#x26; Oudeyer, P.-Y. <em>Towards a neuroscience of active sampling and curiosity</em>. Nature Reviews Neuroscience.<br>
+<a href="https://www.nature.com/articles/s41583-018-0078-0" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[11] <em>Assessing basic/fundamental psychological need fulfillment: systematic mapping and review of existing scales to foster cumulative science</em>. Frontiers in Psychology (2024).<br>
+<a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1427478/full" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[12] <em>Toward a comprehensive taxonomy of human motives</em>.<br>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5322894/" rel="noopener noreferrer">原文</a></p>
+<p class="article-prose__paragraph">[13] <em>Navigating Motivation: A Semantic and Subjective Atlas of 7 Motives</em>.<br>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7874174/" rel="noopener noreferrer">原文</a></p>
+<h4 id="一句话版本" class="article-prose__heading">一句话版本</h4>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mtext mathvariant="bold">人最底层反复面对的六类问题是：身体是否可承受、选择是否属于自己、目标是否做得到、世界是否看得懂、人与人是否连得上、行动与存在是否值得。</mtext></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{
+\textbf{人最底层反复面对的六类问题是：身体是否可承受、选择是否属于自己、目标是否做得到、世界是否看得懂、人与人是否连得上、行动与存在是否值得。}
+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3661em;vertical-align:-0.34em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0261em;"><span style="top:-3.3661em;"><span class="pstrut" style="height:3.3661em;"></span><span class="boxpad"><span class="mord"><span class="mord"><span class="mord text"><span class="mord textbf cjk_fallback">人最底层反复面对的六类问题是：身体是否可承受、选择是否属于自己、目标是否做得到、世界是否看得懂、人与人是否连得上、行动与存在是否值得。</span></span></span></span></span></span><span style="top:-3.0261em;"><span class="pstrut" style="height:3.3661em;"></span><span class="stretchy fbox" style="height:1.3661em;border-style:solid;border-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.34em;"><span></span></span></span></span></span></span></span></span></span>
+<section data-footnotes="" class="footnotes"><h2 class="sr-only article-prose__heading" id="user-content-footnote-label">Footnotes</h2>
+<ol class="article-prose__list">
+<li id="user-content-fn-curiosity-circuits">
+<p class="article-prose__paragraph">Monosov, I. E. <em>Curiosity: primate neural circuits for novelty and information seeking</em>. Nature Reviews Neuroscience (2024). <a href="https://www.nature.com/articles/s41583-023-00784-9" rel="noopener noreferrer">原文</a> <a href="#user-content-fnref-curiosity-circuits" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-curiosity-sampling">
+<p class="article-prose__paragraph">Gottlieb, J. &#x26; Oudeyer, P.-Y. <em>Towards a neuroscience of active sampling and curiosity</em>. Nature Reviews Neuroscience. <a href="https://www.nature.com/articles/s41583-018-0078-0" rel="noopener noreferrer">原文</a> <a href="#user-content-fnref-curiosity-sampling" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-sdt">
+<p class="article-prose__paragraph">Self-Determination Theory — Basic Psychological Needs. <a href="https://selfdeterminationtheory.org/topics/application-basic-psychological-needs/" rel="noopener noreferrer">原文</a> <a href="#user-content-fnref-sdt" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-sdt-work-review">
+<p class="article-prose__paragraph">Van den Broeck, A. et al. <em>A Review of Self-Determination Theory’s Basic Psychological Needs at Work</em>. <a href="https://selfdeterminationtheory.org/wp-content/uploads/2024/01/2016_VandenbroeckFerrisEtAl_a-review-of-self-determination-theory.pdf" rel="noopener noreferrer">原文</a> <a href="#user-content-fnref-sdt-work-review" data-footnote-backref="" aria-label="Back to reference 4" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-social-motives">
+<p class="article-prose__paragraph">Pick, C. M. et al. <em>Fundamental social motives measured across forty-two cultures in two waves</em>. Scientific Data (2022). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9380674/" rel="noopener noreferrer">原文</a> <a href="#user-content-fnref-social-motives" data-footnote-backref="" aria-label="Back to reference 5" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-needs-scales">
+<p class="article-prose__paragraph"><em>Assessing basic/fundamental psychological need fulfillment: systematic mapping and review of existing scales to foster cumulative science</em>. Frontiers in Psychology (2024). <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1427478/full" rel="noopener noreferrer">原文</a> <a href="#user-content-fnref-needs-scales" data-footnote-backref="" aria-label="Back to reference 6" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-needs-scales-2" data-footnote-backref="" aria-label="Back to reference 6-2" class="data-footnote-backref">↩<sup>2</sup></a></p>
+</li>
+</ol>
+</section></div></div><footer class="post-end"><div class="post-end__rule" aria-hidden="true">ER</div><p class="updated-note">Last updated <time datetime="2026-07-29">2026年7月29日</time>.</p></footer></article><section id="subscribe" class="subscribe-cta subscribe-cta--band" aria-labelledby="subscribe-title-band"><div class="subscribe-cta__inner"><div class="subscribe-cta__copy"><p class="section-kicker">A note worth keeping</p><h2 id="subscribe-title-band">Make room for one clear idea.</h2><p>A considered essay every other Thursday. No feed to keep up with.</p></div></div></section><section class="more-reading page-shell" aria-labelledby="more-reading-title"><div class="section-heading section-heading--compact"><p class="section-kicker">Keep reading</p><h2 id="more-reading-title">Two more field notes</h2></div><div class="post-list"><article class="post-list-item"><div class="post-list-item__copy"><div class="post-list-item__meta"><time datetime="2026-07-29">2026年7月29日</time></div><h3><a href="../01-b/">信源</a></h3><p>如何产生高质量信息与伪高质量信息</p><span class="post-list-item__byline">By Ruishen</span></div></article><article class="post-list-item"><div class="post-list-item__copy"><div class="post-list-item__meta"><time datetime="2026-07-29">2026年7月29日</time></div><h3><a href="../self-referential-information-systems/">自指问题的信息系统</a></h3><p>识别不同类型的自指与循环结构，并从防御和攻击两端设计处理机制。</p><span class="post-list-item__byline">By Ruishen</span></div></article></div></section></main><footer class="site-footer"><div class="site-footer__inner"><div class="site-footer__brand"><p class="site-footer__name">认识论与信息论</p><p>Clear ideas for building things that last.</p></div><nav aria-label="Footer navigation"><ul><li><a href="../../principles/">Editorial principles</a></li><li><a href="../../privacy/">Privacy</a></li><li><a href="../../rss.xml">RSS</a></li></ul></nav><p class="site-footer__copyright">© 2026 Ruishen</p></div></footer><a class="back-to-top" href="#page-top" aria-label="Back to top"><span aria-hidden="true">↑</span></a><script type="module" src="../../_astro/BaseLayout.astro_astro_type_script_index_0_lang.CKnuASas.js"></script></body></html>
