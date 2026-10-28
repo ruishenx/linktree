@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.1.3"><title>蓝队约束与反失真机制 — 我的哲学 My Philosophy</title><meta name="description" content="对应四种失真算子建立饱和恢复、绝对基准、延迟决策、目标与代理分离等防御机制，并补充退出对称性和自主性验证，作为蓝队设计原则。"><link rel="canonical" href="https://ruishenx.github.io/linktree/er/p/desire-economy-06-blue-team/"><link rel="icon" href="../../generated/home/198d8d390b04f255.svg"><meta property="og:type" content="article"><meta property="og:site_name" content="我的哲学 My Philosophy"><meta property="og:title" content="蓝队约束与反失真机制 — 我的哲学 My Philosophy"><meta property="og:description" content="对应四种失真算子建立饱和恢复、绝对基准、延迟决策、目标与代理分离等防御机制，并补充退出对称性和自主性验证，作为蓝队设计原则。"><meta property="og:url" content="https://ruishenx.github.io/linktree/er/p/desire-economy-06-blue-team/"><meta property="og:image" content="https://ruishenx.github.io/linktree/er/generated/home/198d8d390b04f255.svg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="蓝队约束与反失真机制 — 我的哲学 My Philosophy"><meta name="twitter:description" content="对应四种失真算子建立饱和恢复、绝对基准、延迟决策、目标与代理分离等防御机制，并补充退出对称性和自主性验证，作为蓝队设计原则。"><meta name="twitter:image" content="https://ruishenx.github.io/linktree/er/generated/home/198d8d390b04f255.svg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"蓝队约束与反失真机制","description":"对应四种失真算子建立饱和恢复、绝对基准、延迟决策、目标与代理分离等防御机制，并补充退出对称性和自主性验证，作为蓝队设计原则。","author":[{"@type":"Person","name":"Ruishen","url":"https://ruishenx.github.io/linktree/er/about/"}],"datePublished":"2026-10-25","dateModified":"2026-10-25","image":"https://ruishenx.github.io/linktree/er/generated/home/198d8d390b04f255.svg","keywords":["HPMC","六维基底","跨行业比较"],"publisher":{"@type":"Organization","name":"我的哲学 My Philosophy","logo":{"@type":"ImageObject","url":"https://ruishenx.github.io/linktree/er/generated/home/198d8d390b04f255.svg"}},"mainEntityOfPage":"https://ruishenx.github.io/linktree/er/p/desire-economy-06-blue-team/"}</script><link rel="stylesheet" href="../../_astro/BaseLayout.kdcq7koK.css"></head><body id="page-top" data-page-kind="article"><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="site-header__inner"><a class="brand" href="../../" aria-label="我的哲学 My Philosophy home"><img src="../../generated/home/198d8d390b04f255.svg" alt="" width="32" height="32"><span>我的哲学 My Philosophy</span></a><nav class="site-nav" aria-label="Primary navigation"><ul><li><a href="../../">Home</a></li><li><a href="../../hpmc/">HPMC</a></li><li><a href="../../religion/">Religion</a></li><li><a href="../../desire-economy/">Desire Economy</a></li><li><a href="../../social-value-stack/">Social Value Stack</a></li><li><a href="../../about/">About</a></li></ul></nav></div></header><main id="main-content"><article class="post"><div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div><aside class="reading-toc" data-reading-toc hidden><details open><summary>本文目录 <span aria-hidden="true">↗</span></summary><nav aria-label="本文目录"><ol></ol></nav></details></aside><script type="module">var e=document.querySelector(`.post-body`),t=document.querySelector(`[data-reading-toc]`),n=document.querySelector(`[data-reading-progress]`);if(e&&t&&n){let r=Array.from(e.querySelectorAll(`h2[id], h3[id]`)),i=t.querySelector(`ol`),a=r.map(e=>{let t=document.createElement(`li`);t.className=e.tagName===`H3`?`reading-toc__sub`:``;let n=document.createElement(`a`);return n.href=`#${encodeURIComponent(e.id)}`,n.textContent=e.textContent,t.append(n),i.append(t),n});t.hidden=r.length<2;let o=t.querySelector(`details`);window.matchMedia(`(max-width: 1250px)`).matches&&(o.open=!1);let s=0,c=()=>{s=0;let t=e.getBoundingClientRect(),i=window.innerHeight*.25,o=Math.max(0,Math.min(1,(i-t.top)/Math.max(1,t.height-window.innerHeight*.6)));n.style.transform=`scaleX(${o})`;let c=-1;r.forEach((e,t)=>{e.getBoundingClientRect().top<=i&&(c=t)}),a.forEach((e,t)=>{t===c?e.setAttribute(`aria-current`,`location`):e.removeAttribute(`aria-current`)})},l=()=>{s||=requestAnimationFrame(c)};window.addEventListener(`scroll`,l,{passive:!0}),window.addEventListener(`resize`,l,{passive:!0}),new ResizeObserver(l).observe(e),c()}</script><header class="post-header"><div class="article-breadcrumb"><a href="../../">我的哲学 My Philosophy</a><span aria-hidden="true">/</span><a href="../../desire-economy/">堕落算子与可编程欲望经济</a></div><h1>蓝队约束与反失真机制</h1><p class="post-header__subtitle">第 6 篇专题｜堕落算子与可编程欲望经济</p><p class="post-header__dek">对应四种失真算子建立饱和恢复、绝对基准、延迟决策、目标与代理分离等防御机制，并补充退出对称性和自主性验证，作为蓝队设计原则。</p><div class="post-header__meta"><span>Ruishen</span><span aria-hidden="true">•</span><time datetime="2026-10-25">2026年10月25日</time><span aria-hidden="true">•</span><span>约 2 分钟阅读</span></div><ul class="tag-list" aria-label="Article topics"><li>HPMC</li><li>六维基底</li><li>跨行业比较</li></ul></header><div class="post-body"><div class="article-prose"><h2 id="蓝队约束与反失真机制" class="article-prose__heading">蓝队约束与反失真机制</h2>
+<p class="article-prose__paragraph"><strong>专题研究｜堕落算子与可编程欲望经济</strong><br>
+<a href="../desire-economy-00-overview/">返回系列总览</a></p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph"><strong>研究性质</strong>：本文提出的是概念模型及工程化假说，相关机制仍需经验验证。</p>
+</blockquote>
+<h3 id="摘要" class="article-prose__heading">摘要</h3>
+<p class="article-prose__paragraph">对应四种失真算子建立饱和恢复、绝对基准、延迟决策、目标与代理分离等防御机制，并补充退出对称性和自主性验证，作为蓝队设计原则。</p>
+<p class="article-prose__paragraph"><strong>关键词</strong>：六维基底、跨行业比较。</p>
+<h3 id="1-理论框架" class="article-prose__heading">1. 理论框架</h3>
+<p class="article-prose__paragraph">蓝队措施应满足比例性：限制有害反馈，而不应因防御而过度剥夺用户自主。防御效果需用长期结果验证。</p>
+<pre class="mermaid article-prose__mermaid" tabindex="0" aria-label="Mermaid diagram">flowchart LR
+ U[无上限化] --> S[恢复饱和]
+ R[相对化] --> B[绝对基准]
+ T[即时化] --> L[延迟决策]
+ P[代理化] --> G[目标澄清]</pre>
+<p class="article-prose__paragraph"><strong>假设与边界</strong>：仅说明概念上的机制与风险条件；不能由平台指标推断个体心理诊断，也不能将所有增长或利润视为剥削。</p>
+<h3 id="2-蓝队如何对抗堕落算子与反馈放大" class="article-prose__heading">2. 蓝队：如何对抗堕落算子与反馈放大</h3>
+<p class="article-prose__paragraph">防御目标不是“消灭欲望”，而是：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mtext>restore controllability of the value function</mtext></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{
+\text{restore controllability of the value function}
+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.5689em;vertical-align:-0.5344em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0344em;"><span style="top:-3.5689em;"><span class="pstrut" style="height:3.5689em;"></span><span class="boxpad"><span class="mord"><span class="mord"><span class="mord text"><span class="mord">restore controllability of the value function</span></span></span></span></span></span><span style="top:-3.0344em;"><span class="pstrut" style="height:3.5689em;"></span><span class="stretchy fbox" style="height:1.5689em;border-style:solid;border-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5344em;"><span></span></span></span></span></span></span></span></span></span>
+<p class="article-prose__paragraph">即让主体重新拥有：</p>
+<ul class="article-prose__list">
+<li>选择权；</li>
+<li>时间尺度；</li>
+<li>目标函数；</li>
+<li>信息模型；
+-退出能力。</li>
+</ul>
+<hr class="article-prose__rule">
+<h4 id="对-u恢复饱和机制" class="article-prose__heading">对 U：恢复饱和机制</h4>
+<p class="article-prose__paragraph"><strong>原攻击</strong></p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>x</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">x\rightarrow\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">∞</span></span></span></span></span>
+<p class="article-prose__paragraph"><strong>防守</strong></p>
+<p class="article-prose__paragraph">人为重新加入：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>x</mi><mi>max</mi><mo>⁡</mo></msub></mrow><annotation encoding="application/x-tex">x_{\max}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mop mtight"><span class="mtight">m</span><span class="mtight">a</span><span class="mtight">x</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>
+<p class="article-prose__paragraph">或：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>U</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>x</mi></mrow></mfrac><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{\partial U}{\partial x}\rightarrow0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.0556em;">∂</span><span class="mord mathnormal">x</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.0556em;">∂</span><span class="mord mathnormal" style="margin-right:0.109em;">U</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span>
+<p class="article-prose__paragraph">工程措施：</p>
+<ul class="article-prose__list">
+<li>session cap；</li>
+<li>time cap；</li>
+<li>spending cap；</li>
+<li>delayed re-entry；</li>
+<li>batch consumption；</li>
+<li>periodic reset。</li>
+</ul>
+<hr class="article-prose__rule">
+<h4 id="对-r从排名恢复绝对坐标" class="article-prose__heading">对 R：从排名恢复绝对坐标</h4>
+<p class="article-prose__paragraph"><strong>原攻击</strong></p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>V</mi><mi>i</mi></msub><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>V</mi><mi>i</mi></msub><mo>−</mo><msub><mi>V</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">V_i=f(V_i-V_j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0572em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span>
+<p class="article-prose__paragraph"><strong>防守</strong></p>
+<p class="article-prose__paragraph">恢复：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>V</mi><mi>i</mi></msub><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>g</mi><mi>o</mi><mi>a</mi><msub><mi>l</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">V_i=f(goal_i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0359em;">g</span><span class="mord mathnormal">o</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0197em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span>
+<p class="article-prose__paragraph">实务：</p>
+<ul class="article-prose__list">
+<li>隐藏 leaderboard；</li>
+<li>隐藏 follower count；</li>
+<li>使用 personal benchmark；</li>
+<li>使用 rolling self-comparison；</li>
+<li>将 peer ranking 降为辅助信息。</li>
+</ul>
+<hr class="article-prose__rule">
+<h4 id="对-t拉长决策时间" class="article-prose__heading">对 T：拉长决策时间</h4>
+<p class="article-prose__paragraph">原攻击：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>γ</mi><mo>↓</mo></mrow><annotation encoding="application/x-tex">\gamma\downarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0556em;">γ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↓</span></span></span></span></span>
+<p class="article-prose__paragraph">防守：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>γ</mi><mo>↑</mo></mrow><annotation encoding="application/x-tex">\gamma\uparrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0556em;">γ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↑</span></span></span></span></span>
+<p class="article-prose__paragraph">手段：</p>
+<ul class="article-prose__list">
+<li>cooling-off；</li>
+<li>delayed execution；</li>
+<li>second confirmation；</li>
+<li>future-cost display；</li>
+<li>precommitment；</li>
+<li>batch notification。</li>
+</ul>
+<p class="article-prose__paragraph">本质是：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mtext>把冲动行为重新变成长时域决策</mtext></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{
+\text{把冲动行为重新变成长时域决策}
+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3633em;vertical-align:-0.34em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0233em;"><span style="top:-3.3633em;"><span class="pstrut" style="height:3.3633em;"></span><span class="boxpad"><span class="mord"><span class="mord"><span class="mord text"><span class="mord cjk_fallback">把冲动行为重新变成长时域决策</span></span></span></span></span></span><span style="top:-3.0233em;"><span class="pstrut" style="height:3.3633em;"></span><span class="stretchy fbox" style="height:1.3633em;border-style:solid;border-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.34em;"><span></span></span></span></span></span></span></span></span></span>
+<hr class="article-prose__rule">
+<h4 id="对-p拆解-proxy-与真实-objective" class="article-prose__heading">对 P：拆解 proxy 与真实 objective</h4>
+<p class="article-prose__paragraph">这是最重要的蓝队动作之一。</p>
+<p class="article-prose__paragraph">问：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Proxy</mtext><mo mathvariant="normal">≠</mo><mtext>Goal</mtext></mrow><annotation encoding="application/x-tex">\text{Proxy}
+\neq
+\text{Goal}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Proxy</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mspace nobreak"></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">Goal</span></span></span></span></span></span>
+<p class="article-prose__paragraph">例如：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-prose__table-wrap" role="region" aria-label="Scrollable table" tabindex="0"><table><thead><tr><th>Proxy</th><th>真实目标</th></tr></thead><tbody><tr><td>follower</td><td>真正关系</td></tr><tr><td>财富排名</td><td>能力/自由</td></tr><tr><td>streak</td><td>学习</td></tr><tr><td>XP</td><td>技能</td></tr><tr><td>点赞</td><td>内容价值</td></tr><tr><td>奢侈品</td><td>身份/审美/质量</td></tr><tr><td>日活</td><td>产品真实效用</td></tr></tbody></table></div>
+<p class="article-prose__paragraph">防守机制：</p>
+<ul class="article-prose__list">
+<li>显示多个指标；</li>
+<li>降低单一 score 权重；</li>
+<li>定期目标重置；</li>
+<li>质性复盘；</li>
+<li>反 Goodhart 审计。</li>
+</ul>
+<hr class="article-prose__rule">
+<h3 id="3-反失真机制的副作用" class="article-prose__heading">3. 反失真机制的副作用</h3>
+<p class="article-prose__paragraph">增加决策摩擦可能降低无害体验；隐藏社会指标可能削弱正常社交发现；消费限制可能干预自愿选择。因此蓝队设计需要按风险分级、提供明示选择，并接受独立效果评估。</p></div></div><footer class="post-end"><div class="post-end__rule" aria-hidden="true">MyPhil.</div><p class="updated-note">Last updated <time datetime="2026-10-25">2026年10月25日</time>.</p></footer></article><section id="subscribe" class="subscribe-cta subscribe-cta--band" aria-labelledby="subscribe-title-band"><div class="subscribe-cta__inner"><div class="subscribe-cta__copy"><p class="section-kicker">My Philosophy</p><h2 id="subscribe-title-band">构建思维圣殿</h2><p>Build the Sanctuary of Thought.</p></div></div></section><section class="more-reading page-shell" aria-labelledby="more-reading-title"><div class="section-heading section-heading--compact"><p class="section-kicker">继续思考</p><h2 id="more-reading-title">延伸阅读</h2></div><div class="post-list"><article class="post-list-item"><div class="post-list-item__copy"><div class="post-list-item__meta"><time datetime="2026-10-25">2026年10月25日</time></div><h3><a href="../desire-economy-00-overview/">堕落算子、欲望经济与攻防实践：理论总览</a></h3><p>将六维原始动机、四类失真、七宗罪式行为吸引子和商业反馈机制置于同一抽象结构。核心区分是需求满足与需求缺口放大；即使企业具有高利润、高留存或显著网络效应，也不能据此直接认定存在有害捕获。整体研究采用概念分析、反事实判别与系统安全审计的组合。</p><span class="post-list-item__byline">Ruishen</span></div><span class="post-list-item__arrow" aria-hidden="true">↗</span></article><article class="post-list-item"><div class="post-list-item__copy"><div class="post-list-item__meta"><time datetime="2026-10-25">2026年10月25日</time></div><h3><a href="../desire-economy-01-foundation/">六维基底与四层因果模型</a></h3><p>六维基底描述人类的原始约束；堕落算子与七宗罪分别属于更高层的价值函数失真和行为吸引子。本篇建立 H—D—S—F 的因果语义，划清原始需求、行为失控与商业激励的层级。</p><span class="post-list-item__byline">Ruishen</span></div><span class="post-list-item__arrow" aria-hidden="true">↗</span></article></div></section></main><footer class="site-footer"><div class="site-footer__inner"><div class="site-footer__brand"><p class="site-footer__name">我的哲学 My Philosophy</p><p>我的哲学 My Philosophy</p></div><nav aria-label="Footer navigation"><ul><li><a href="../../principles/">Editorial principles</a></li><li><a href="../../privacy/">Privacy</a></li><li><a href="../../rss.xml">RSS</a></li></ul></nav><p class="site-footer__copyright">© 2026 Ruishen</p></div></footer><a data-pdf-resources href="../../generated/pdfjs/manifest.json" hidden aria-hidden="true" tabindex="-1">PDF resources</a><script type="module" src="../../_astro/PdfReaders.astro_astro_type_script_index_0_lang.CrCUiJxw.js"></script><a class="back-to-top" href="#page-top" aria-label="Back to top"><span aria-hidden="true">↑</span></a><script type="module" src="../../_astro/BaseLayout.astro_astro_type_script_index_0_lang.CPm7KXfl.js"></script></body></html>

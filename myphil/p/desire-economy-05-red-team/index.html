@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.1.3"><title>闭环捕获链与红队审计 — 我的哲学 My Philosophy</title><meta name="description" content="抽象商业闭环中的触发、行为、奖赏、测量、策略更新和锁定机制，提出面向产品级审计的红队检查序列。审计目标是证明或排除制度设计中的风险，而不是优化对个体弱点的操纵。"><link rel="canonical" href="https://ruishenx.github.io/linktree/er/p/desire-economy-05-red-team/"><link rel="icon" href="../../generated/home/198d8d390b04f255.svg"><meta property="og:type" content="article"><meta property="og:site_name" content="我的哲学 My Philosophy"><meta property="og:title" content="闭环捕获链与红队审计 — 我的哲学 My Philosophy"><meta property="og:description" content="抽象商业闭环中的触发、行为、奖赏、测量、策略更新和锁定机制，提出面向产品级审计的红队检查序列。审计目标是证明或排除制度设计中的风险，而不是优化对个体弱点的操纵。"><meta property="og:url" content="https://ruishenx.github.io/linktree/er/p/desire-economy-05-red-team/"><meta property="og:image" content="https://ruishenx.github.io/linktree/er/generated/home/198d8d390b04f255.svg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="闭环捕获链与红队审计 — 我的哲学 My Philosophy"><meta name="twitter:description" content="抽象商业闭环中的触发、行为、奖赏、测量、策略更新和锁定机制，提出面向产品级审计的红队检查序列。审计目标是证明或排除制度设计中的风险，而不是优化对个体弱点的操纵。"><meta name="twitter:image" content="https://ruishenx.github.io/linktree/er/generated/home/198d8d390b04f255.svg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"闭环捕获链与红队审计","description":"抽象商业闭环中的触发、行为、奖赏、测量、策略更新和锁定机制，提出面向产品级审计的红队检查序列。审计目标是证明或排除制度设计中的风险，而不是优化对个体弱点的操纵。","author":[{"@type":"Person","name":"Ruishen","url":"https://ruishenx.github.io/linktree/er/about/"}],"datePublished":"2026-10-25","dateModified":"2026-10-25","image":"https://ruishenx.github.io/linktree/er/generated/home/198d8d390b04f255.svg","keywords":["HPMC","六维基底","蓝队控制"],"publisher":{"@type":"Organization","name":"我的哲学 My Philosophy","logo":{"@type":"ImageObject","url":"https://ruishenx.github.io/linktree/er/generated/home/198d8d390b04f255.svg"}},"mainEntityOfPage":"https://ruishenx.github.io/linktree/er/p/desire-economy-05-red-team/"}</script><link rel="stylesheet" href="../../_astro/BaseLayout.kdcq7koK.css"></head><body id="page-top" data-page-kind="article"><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="site-header__inner"><a class="brand" href="../../" aria-label="我的哲学 My Philosophy home"><img src="../../generated/home/198d8d390b04f255.svg" alt="" width="32" height="32"><span>我的哲学 My Philosophy</span></a><nav class="site-nav" aria-label="Primary navigation"><ul><li><a href="../../">Home</a></li><li><a href="../../hpmc/">HPMC</a></li><li><a href="../../religion/">Religion</a></li><li><a href="../../desire-economy/">Desire Economy</a></li><li><a href="../../social-value-stack/">Social Value Stack</a></li><li><a href="../../about/">About</a></li></ul></nav></div></header><main id="main-content"><article class="post"><div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div><aside class="reading-toc" data-reading-toc hidden><details open><summary>本文目录 <span aria-hidden="true">↗</span></summary><nav aria-label="本文目录"><ol></ol></nav></details></aside><script type="module">var e=document.querySelector(`.post-body`),t=document.querySelector(`[data-reading-toc]`),n=document.querySelector(`[data-reading-progress]`);if(e&&t&&n){let r=Array.from(e.querySelectorAll(`h2[id], h3[id]`)),i=t.querySelector(`ol`),a=r.map(e=>{let t=document.createElement(`li`);t.className=e.tagName===`H3`?`reading-toc__sub`:``;let n=document.createElement(`a`);return n.href=`#${encodeURIComponent(e.id)}`,n.textContent=e.textContent,t.append(n),i.append(t),n});t.hidden=r.length<2;let o=t.querySelector(`details`);window.matchMedia(`(max-width: 1250px)`).matches&&(o.open=!1);let s=0,c=()=>{s=0;let t=e.getBoundingClientRect(),i=window.innerHeight*.25,o=Math.max(0,Math.min(1,(i-t.top)/Math.max(1,t.height-window.innerHeight*.6)));n.style.transform=`scaleX(${o})`;let c=-1;r.forEach((e,t)=>{e.getBoundingClientRect().top<=i&&(c=t)}),a.forEach((e,t)=>{t===c?e.setAttribute(`aria-current`,`location`):e.removeAttribute(`aria-current`)})},l=()=>{s||=requestAnimationFrame(c)};window.addEventListener(`scroll`,l,{passive:!0}),window.addEventListener(`resize`,l,{passive:!0}),new ResizeObserver(l).observe(e),c()}</script><header class="post-header"><div class="article-breadcrumb"><a href="../../">我的哲学 My Philosophy</a><span aria-hidden="true">/</span><a href="../../desire-economy/">堕落算子与可编程欲望经济</a></div><h1>闭环捕获链与红队审计</h1><p class="post-header__subtitle">第 5 篇专题｜堕落算子与可编程欲望经济</p><p class="post-header__dek">抽象商业闭环中的触发、行为、奖赏、测量、策略更新和锁定机制，提出面向产品级审计的红队检查序列。审计目标是证明或排除制度设计中的风险，而不是优化对个体弱点的操纵。</p><div class="post-header__meta"><span>Ruishen</span><span aria-hidden="true">•</span><time datetime="2026-10-25">2026年10月25日</time><span aria-hidden="true">•</span><span>约 3 分钟阅读</span></div><ul class="tag-list" aria-label="Article topics"><li>HPMC</li><li>六维基底</li><li>蓝队控制</li></ul></header><div class="post-body"><div class="article-prose"><h2 id="闭环捕获链与红队审计" class="article-prose__heading">闭环捕获链与红队审计</h2>
+<p class="article-prose__paragraph"><strong>专题研究｜堕落算子与可编程欲望经济</strong><br>
+<a href="../desire-economy-00-overview/">返回系列总览</a></p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph"><strong>研究性质</strong>：本文提出的是概念模型及工程化假说，相关机制仍需经验验证。</p>
+</blockquote>
+<h3 id="摘要" class="article-prose__heading">摘要</h3>
+<p class="article-prose__paragraph">抽象商业闭环中的触发、行为、奖赏、测量、策略更新和锁定机制，提出面向产品级审计的红队检查序列。审计目标是证明或排除制度设计中的风险，而不是优化对个体弱点的操纵。</p>
+<p class="article-prose__paragraph"><strong>关键词</strong>：六维基底、蓝队控制。</p>
+<h3 id="1-理论框架" class="article-prose__heading">1. 理论框架</h3>
+<p class="article-prose__paragraph">将红队限定为合规审计和风险重建。以下模型的“攻击链”是失效因果链，而非面向特定人群的实际操纵步骤。</p>
+<pre class="mermaid article-prose__mermaid" tabindex="0" aria-label="Mermaid diagram">flowchart LR
+ H[需求缺口] --> T[刺激]
+ T --> A[行为]
+ A --> M[测量]
+ M --> P[策略更新]
+ P --> T
+ X[红队审计] --> M</pre>
+<p class="article-prose__paragraph"><strong>假设与边界</strong>：仅说明概念上的机制与风险条件；不能由平台指标推断个体心理诊断，也不能将所有增长或利润视为剥削。</p>
+<h3 id="2-从攻防角度分析完整攻击链" class="article-prose__heading">2. 从攻防角度分析：完整攻击链</h3>
+<p class="article-prose__paragraph">从 red-team 角度，一个欲望捕获系统可以抽象成：</p>
+<pre tabindex="0" class="article-prose__code"><code class="hljs language-text">[1] Recon
+    ↓
+识别个体最脆弱的 H 维度
+    ↓
+[2] Trigger
+    ↓
+制造 B/A/C/E/R/V 缺口感
+    ↓
+[3] Distortion
+    ↓
+使用 U / R / T / P 对价值函数变形
+    ↓
+[4] Action
+    ↓
+点击 / 下注 / 购买 / 订阅 / 展示 / 争论
+    ↓
+[5] Reward
+    ↓
+即时奖励或可变奖励
+    ↓
+[6] Measurement
+    ↓
+记录 reaction / spend / time / return
+    ↓
+[7] Adaptation
+    ↓
+个性化下次刺激
+    ↓
+[8] Lock-in
+    ↓
+习惯、身份、社交图、资产、streak、关系沉没成本
+</code></pre>
+<p class="article-prose__paragraph">公式化：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>H</mi><mi>t</mi></msub><mo>→</mo><mi>G</mi><mi>a</mi><msub><mi>p</mi><mi>t</mi></msub><mo>→</mo><mi>D</mi><mo stretchy="false">(</mo><mi>G</mi><mi>a</mi><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>→</mo><mi>A</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><msub><mi>n</mi><mi>t</mi></msub><mo>→</mo><mi>R</mi><mi>e</mi><mi>w</mi><mi>a</mi><mi>r</mi><msub><mi>d</mi><mi>t</mi></msub><mo>→</mo><mi>O</mi><mi>b</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi>v</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><msub><mi>n</mi><mi>t</mi></msub><mo>→</mo><mi>P</mi><mi>o</mi><mi>l</mi><mi>i</mi><mi>c</mi><msub><mi>y</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">H_t
+\rightarrow
+Gap_t
+\rightarrow
+D(Gap_t)
+\rightarrow
+Action_t
+\rightarrow
+Reward_t
+\rightarrow
+Observation_t
+\rightarrow
+Policy_{t+1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">G</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">c</span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.0269em;">w</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mord mathnormal">b</span><span class="mord mathnormal" style="margin-right:0.0278em;">ser</span><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9028em;vertical-align:-0.2083em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">P</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">i</span><span class="mord mathnormal">c</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span></span>
+<p class="article-prose__paragraph">如果系统具备 personalization：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mi>o</mi><mi>l</mi><mi>i</mi><mi>c</mi><msub><mi>y</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>arg</mi><mo>⁡</mo><munder><mrow><mi>max</mi><mo>⁡</mo></mrow><mi>a</mi></munder><mi mathvariant="double-struck">E</mi><mo stretchy="false">[</mo><mtext>engagement / spend / retention</mtext><mo>∣</mo><mi>u</mi><mi>s</mi><mi>e</mi><msub><mi>r</mi><mi>i</mi></msub><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">Policy_{t+1}
+=
+\arg\max_a
+\mathbb{E}
+[\text{engagement / spend / retention}\mid user_i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9028em;vertical-align:-0.2083em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">P</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">i</span><span class="mord mathnormal">c</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.45em;vertical-align:-0.7em;"></span><span class="mop">ar<span style="margin-right:0.0139em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4306em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">max</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbb">E</span><span class="mopen">[</span><span class="mord text"><span class="mord">engagement / spend / retention</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">u</span><span class="mord mathnormal">se</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span></span>
+<p class="article-prose__paragraph">则从用户角度看，已经出现一个典型的不对称博弈：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mrow><mtext>单个有限注意力的人</mtext><mspace width="1em"></mspace><mi>v</mi><mi>s</mi><mspace width="1em"></mspace><mtext>持续观测并优化刺激策略的系统</mtext></mrow></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{
+\text{单个有限注意力的人}
+\quad vs \quad
+\text{持续观测并优化刺激策略的系统}
+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3633em;vertical-align:-0.34em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0233em;"><span style="top:-3.3633em;"><span class="pstrut" style="height:3.3633em;"></span><span class="boxpad"><span class="mord"><span class="mord"><span class="mord text"><span class="mord cjk_fallback">单个有限注意力的人</span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:1em;"></span><span class="mord text"><span class="mord cjk_fallback">持续观测并优化刺激策略的系统</span></span></span></span></span></span><span style="top:-3.0233em;"><span class="pstrut" style="height:3.3633em;"></span><span class="stretchy fbox" style="height:1.3633em;border-style:solid;border-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.34em;"><span></span></span></span></span></span></span></span></span></span>
+<hr class="article-prose__rule">
+<h3 id="3-红队如何审计一个系统是否具备欲望捕获能力" class="article-prose__heading">3. 红队：如何审计一个系统是否具备“欲望捕获能力”</h3>
+<p class="article-prose__paragraph">Red-team 不是简单问：</p>
+<blockquote class="article-prose__blockquote">
+<p class="article-prose__paragraph">“产品是否让人上瘾？”</p>
+</blockquote>
+<p class="article-prose__paragraph">而是沿完整链条逐项检查。</p>
+<hr class="article-prose__rule">
+<h4 id="第一步motivation-recon" class="article-prose__heading">第一步：Motivation Recon</h4>
+<p class="article-prose__paragraph">对产品建立：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>M</mi><mi>H</mi></msub><mo>=</mo><mo stretchy="false">[</mo><mi>B</mi><mo separator="true">,</mo><mi>A</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>E</mi><mo separator="true">,</mo><mi>R</mi><mo separator="true">,</mo><mi>V</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">M_H=
+[B,A,C,E,R,V]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.109em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0813em;">H</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="mclose">]</span></span></span></span></span>
+<p class="article-prose__paragraph">评分。</p>
+<p class="article-prose__paragraph">例如：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-prose__table-wrap" role="region" aria-label="Scrollable table" tabindex="0"><table><thead><tr><th>维度</th><th>低</th><th>中</th><th>高</th></tr></thead><tbody><tr><td>B</td><td></td><td></td><td>●</td></tr><tr><td>A</td><td></td><td>●</td><td></td></tr><tr><td>C</td><td></td><td>●</td><td></td></tr><tr><td>E</td><td></td><td></td><td>●</td></tr><tr><td>R</td><td></td><td></td><td>●</td></tr><tr><td>V</td><td></td><td></td><td>●</td></tr></tbody></table></div>
+<p class="article-prose__paragraph">问题：</p>
+<ul class="article-prose__list">
+<li>产品最直接刺激哪个 primitive？</li>
+<li>次级 primitive 是什么？</li>
+<li>哪个 primitive 在用户流失前最关键？</li>
+<li>哪个 primitive 被转换成付费？</li>
+</ul>
+<hr class="article-prose__rule">
+<h4 id="第二步distortion-mapping" class="article-prose__heading">第二步：Distortion Mapping</h4>
+<p class="article-prose__paragraph">建立：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>M</mi><mi>D</mi></msub><mo>=</mo><mo stretchy="false">[</mo><mi>U</mi><mo separator="true">,</mo><mi>R</mi><mo separator="true">,</mo><mi>T</mi><mo separator="true">,</mo><mi>P</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">M_D=[U,R,T,P]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.109em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0278em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.109em;">U</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">P</span><span class="mclose">]</span></span></span></span></span>
+<p class="article-prose__paragraph">检查：</p>
+<p class="article-prose__paragraph"><strong>U — 无上限化</strong></p>
+<ul class="article-prose__list">
+<li>是否存在自然终点？</li>
+<li>是否鼓励“再一个”？</li>
+<li>reward 是否可以无限叠加？</li>
+</ul>
+<p class="article-prose__paragraph"><strong>R — 相对化</strong></p>
+<ul class="article-prose__list">
+<li>是否显示 leaderboard？</li>
+<li>是否展示他人的高光状态？</li>
+<li>是否把价值转换为排名？</li>
+</ul>
+<p class="article-prose__paragraph"><strong>T — 即时化</strong></p>
+<ul class="article-prose__list">
+<li>reward 延迟是否接近 0？</li>
+<li>是否通过 push / notification 缩短决策周期？</li>
+<li>是否降低冲动与行动之间的摩擦？</li>
+</ul>
+<p class="article-prose__paragraph"><strong>P — 代理化</strong></p>
+<ul class="article-prose__list">
+<li>是否把 proxy 变成 objective？</li>
+<li>用户是否开始为了 badge / streak / followers 而非原始目的行动？</li>
+</ul>
+<hr class="article-prose__rule">
+<h4 id="第三步feedback-loop-audit" class="article-prose__heading">第三步：Feedback-loop Audit</h4>
+<p class="article-prose__paragraph">识别：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Trigger</mtext><mo>→</mo><mtext>Action</mtext><mo>→</mo><mtext>Reward</mtext><mo>→</mo><mtext>Measurement</mtext><mo>→</mo><mtext>Adaptation</mtext></mrow><annotation encoding="application/x-tex">\text{Trigger}
+\rightarrow
+\text{Action}
+\rightarrow
+\text{Reward}
+\rightarrow
+\text{Measurement}
+\rightarrow
+\text{Adaptation}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Trigger</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">Action</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">Reward</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">Measurement</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Adaptation</span></span></span></span></span></span>
+<p class="article-prose__paragraph">重点看：</p>
+<ul class="article-prose__list">
+<li>reward 是 deterministic 还是 variable？</li>
+<li>是否可个性化？</li>
+<li>是否有 A/B 测试；</li>
+<li>是否追踪 churn；</li>
+<li>是否对高价值用户单独优化；</li>
+<li>是否有 whale / VIP / high spender segmentation。</li>
+</ul>
+<hr class="article-prose__rule">
+<h4 id="第四步lock-in-audit" class="article-prose__heading">第四步：Lock-in Audit</h4>
+<p class="article-prose__paragraph">最强系统不是让用户“喜欢”，而是让退出成本上升。</p>
+<p class="article-prose__paragraph">退出成本可以来自：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>L</mi><mo>=</mo><msub><mi>L</mi><mtext>habit</mtext></msub><mo>+</mo><msub><mi>L</mi><mtext>identity</mtext></msub><mo>+</mo><msub><mi>L</mi><mtext>social</mtext></msub><mo>+</mo><msub><mi>L</mi><mtext>asset</mtext></msub><mo>+</mo><msub><mi>L</mi><mtext>data</mtext></msub><mo>+</mo><msub><mi>L</mi><mtext>status</mtext></msub></mrow><annotation encoding="application/x-tex">L=
+L_{\text{habit}}
++
+L_{\text{identity}}
++
+L_{\text{social}}
++
+L_{\text{asset}}
++
+L_{\text{data}}
++
+L_{\text{status}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">habit</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">identity</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">social</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">asset</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">data</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">status</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>
+<p class="article-prose__paragraph">例如：</p>
+<ul class="article-prose__list">
+<li>habit：行为习惯；</li>
+<li>identity：个人身份；</li>
+<li>social：关系图；</li>
+<li>asset：虚拟资产；</li>
+<li>data：历史记录；</li>
+<li>status：等级/粉丝/声望。</li>
+</ul>
+<hr class="article-prose__rule">
+<h3 id="4-审计输出格式" class="article-prose__heading">4. 审计输出格式</h3>
+<p class="article-prose__paragraph">每项审计结论至少提供：证据、可复现操作路径、潜在受影响维度、风险等级、用户可退出性、缓解措施、复测指标。不得将审计发现转化为针对脆弱个体的诱导建议。</p></div></div><footer class="post-end"><div class="post-end__rule" aria-hidden="true">MyPhil.</div><p class="updated-note">Last updated <time datetime="2026-10-25">2026年10月25日</time>.</p></footer></article><section id="subscribe" class="subscribe-cta subscribe-cta--band" aria-labelledby="subscribe-title-band"><div class="subscribe-cta__inner"><div class="subscribe-cta__copy"><p class="section-kicker">My Philosophy</p><h2 id="subscribe-title-band">构建思维圣殿</h2><p>Build the Sanctuary of Thought.</p></div></div></section><section class="more-reading page-shell" aria-labelledby="more-reading-title"><div class="section-heading section-heading--compact"><p class="section-kicker">继续思考</p><h2 id="more-reading-title">延伸阅读</h2></div><div class="post-list"><article class="post-list-item"><div class="post-list-item__copy"><div class="post-list-item__meta"><time datetime="2026-10-25">2026年10月25日</time></div><h3><a href="../desire-economy-00-overview/">堕落算子、欲望经济与攻防实践：理论总览</a></h3><p>将六维原始动机、四类失真、七宗罪式行为吸引子和商业反馈机制置于同一抽象结构。核心区分是需求满足与需求缺口放大；即使企业具有高利润、高留存或显著网络效应，也不能据此直接认定存在有害捕获。整体研究采用概念分析、反事实判别与系统安全审计的组合。</p><span class="post-list-item__byline">Ruishen</span></div><span class="post-list-item__arrow" aria-hidden="true">↗</span></article><article class="post-list-item"><div class="post-list-item__copy"><div class="post-list-item__meta"><time datetime="2026-10-25">2026年10月25日</time></div><h3><a href="../desire-economy-01-foundation/">六维基底与四层因果模型</a></h3><p>六维基底描述人类的原始约束；堕落算子与七宗罪分别属于更高层的价值函数失真和行为吸引子。本篇建立 H—D—S—F 的因果语义，划清原始需求、行为失控与商业激励的层级。</p><span class="post-list-item__byline">Ruishen</span></div><span class="post-list-item__arrow" aria-hidden="true">↗</span></article></div></section></main><footer class="site-footer"><div class="site-footer__inner"><div class="site-footer__brand"><p class="site-footer__name">我的哲学 My Philosophy</p><p>我的哲学 My Philosophy</p></div><nav aria-label="Footer navigation"><ul><li><a href="../../principles/">Editorial principles</a></li><li><a href="../../privacy/">Privacy</a></li><li><a href="../../rss.xml">RSS</a></li></ul></nav><p class="site-footer__copyright">© 2026 Ruishen</p></div></footer><a data-pdf-resources href="../../generated/pdfjs/manifest.json" hidden aria-hidden="true" tabindex="-1">PDF resources</a><script type="module" src="../../_astro/PdfReaders.astro_astro_type_script_index_0_lang.CrCUiJxw.js"></script><a class="back-to-top" href="#page-top" aria-label="Back to top"><span aria-hidden="true">↑</span></a><script type="module" src="../../_astro/BaseLayout.astro_astro_type_script_index_0_lang.CPm7KXfl.js"></script></body></html>

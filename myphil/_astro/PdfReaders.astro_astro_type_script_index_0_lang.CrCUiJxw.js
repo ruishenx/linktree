@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./reader.CAhK7f2a.js","./preload-helper.CtT0-S4g.js"])))=>i.map(i=>d[i]);
+import{t as e}from"./preload-helper.CtT0-S4g.js";document.querySelector(`[data-pdf-link]`)&&e(async()=>{let{installPdfReaders:e}=await import(`./reader.CAhK7f2a.js`);return{installPdfReaders:e}},__vite__mapDeps([0,1]),import.meta.url).then(({installPdfReaders:e})=>e());
